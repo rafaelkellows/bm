@@ -1,150 +1,240 @@
 @charset "utf-8";
 @font-face {
-  font-family: 'WashInfo';
-  src: url('/library/fonts/zyarial/zyarial_0-webfont.eot');
-  src: url('/library/fonts/zyarial/zyarial_0-webfont.eot?#iefix') format('embedded-opentype'), url('/library/fonts/zyarial/zyarial_0-webfont.ttf') format('truetype'), url('/library/fonts/zyarial/zyarial_0-webfont.svg#focusfont_ipadregular') format('svg');
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-Light.woff') format('woff'), url('../fonts/Lato/Lato-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-Bold.woff') format('woff'), url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-Regular.woff') format('woff'), url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-Medium.woff') format('woff'), url('../fonts/Lato/Lato-Medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
 }
 /*******************************
             GLOBAL
 *******************************/
-.s-third {
-  width: 30px;
-}
-.s-four {
-  width: 140px;
-}
-.s-one {
-  width: 110px;
-}
-.s-five {
-  width: 50px;
-}
-.s-eight-five {
-  width: 85px;
-}
-.top-ten {
-  margin-top: 10px;
-}
-.m-ten {
-  margin-bottom: 10px;
-}
-.m-right {
-  margin-right: 10px;
-}
-.m-left {
-  margin-left: 10px;
-}
+body,
 html,
-body {
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+div,
+span,
+a,
+img,
+ul,
+li,
+dl,
+dt,
+dd,
+article,
+section,
+header,
+p,
+form,
+fieldset,
+button,
+input,
+iframe {
+  border: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  text-decoration: none;
+  outline: none;
 }
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  color: #9c9fa0;
-  font-weight: 400;
-  background: #fff;
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure,
+a,
+img,
+span,
+:after,
+:before {
+  display: block;
 }
-body #wrap {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+::-webkit-input-placeholder {
+  color: #888888;
+  font-weight: normal;
+}
+input:-moz-placeholder {
+  color: #888888;
+  font-weight: normal;
+}
+textarea:-moz-placeholder {
+  color: #888888;
+  font-weight: normal;
+}
+​ h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato";
+  font-weight: 300;
+}
+body,
+input,
+textarea,
+select {
+  font-family: "Lato";
+  font-weight: normal;
+}
+.max-width {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.btns {
+  color: #fff;
+  text-transform: uppercase;
+}
+.d-inline_v-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+/*******************************
+            STRUTUCTURE
+*******************************/
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body * {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-style: normal;
+}
+body main {
+  width: 100%;
+}
+body main:before {
+  content: '';
+  background-color: #57c6d0;
+  width: 100%;
+  height: 31px;
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
 }
-body.noscroll {
-  overflow-y: hidden;
+body main header {
+  max-width: 1140px;
+  margin: 0 auto;
 }
-/********************************
-***************************************  IE update  *****************************/
-div.modalie {
-  background: url(../images/modalbackground.png) repeat;
-  height: 100%;
-  width: 100%;
-  padding-left: 50%;
-  z-index: 99;
-  position: absolute;
-  display: none;
-  font-family: "Arial";
-}
-.modalie .bg {
-  position: absolute;
-  color: #717171;
-  z-index: 999;
-  margin: 150px -200px auto;
-  background-image: url(../images/bg.png);
-  width: 400px;
-  height: 410px;
-  border: 1px solid #c9c9c9;
-  border-radius: 3px;
-}
-/*header*/
-.modalie .head {
-  height: 80px;
-}
-.modalie .head img {
-  margin-top: 30px;
-  margin-left: 55px;
-  float: left;
-}
-.modalie .head p {
-  font-size: 15px;
-  margin: 20px;
-  float: left;
-  width: 40px;
-}
-.modalie .head a span {
-  margin: 20px;
-  float: right;
-  display: block;
-  background-image: url(../images/gui-ie.png);
-  width: 20px;
-  height: 20px;
-}
-.modalie .head a:hover span {
-  background-position: -20px 0px;
-}
-/*Content*/
-.modalie .modalie-content span {
-  margin-top: 20px;
-  float: left;
-  display: block;
-  background: url(../images/gui-ie.png) no-repeat;
-  background-position: 25px -45px;
-  width: 400px;
-  height: 140px;
-}
-.modalie .modalie-content p {
-  line-height: 140%;
-  float: left;
-  font-size: 16px;
-  margin-top: 15px;
-  margin-left: 40px;
-  width: 320px;
+body main header .top-navg {
   text-align: center;
 }
-.modalie .modalie-content a {
-  margin-top: 20px;
-  text-decoration: none;
-  margin-left: 30px;
-  float: left;
-  background: url(../images/gui-ie.png);
-  background-position: 0px -190px;
-  width: 340px;
-  height: 40px;
+body main header .top-navg > nav {
+  display: inline-block;
+  vertical-align: middle;
+  height: 31px;
 }
-.modalie .modalie-content a:hover {
-  background-position: 0px -230px;
+body main header .top-navg > nav a {
+  color: #fff;
+  font-size: 16.5px;
+  line-height: 31px;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
 }
-.modalie .modalie-content a p {
-  margin-left: 10px;
-  margin-top: 10px;
+body main header .top-navg > nav.tl-navg a {
+  margin: 0 45px;
+}
+body main header .top-navg > nav.tr-navg a {
+  margin: 2px 37px;
   text-align: center;
-  color: white;
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  border-radius: 24px;
+  box-sizing: border-box;
+  line-height: 20px;
+}
+body main header .top-navg > nav.tr-navg a i {
+  margin-top: -2px;
+}
+body main header .logo-info {
+  font-size: 0;
+}
+body main header .logo-info h1 {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 64px 55px;
+}
+body main header .logo-info .li-navg {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 173px;
+  margin-left: calc(100% - 727px);
+}
+body main header .logo-info .li-navg .btn {
+  font-size: 16.5px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 4.5px 0;
+  padding: 7px;
+  box-sizing: border-box;
+}
+body main header .logo-info .li-navg .btn._brown {
+  background: #bd9c57;
+}
+body main header .logo-info .li-navg .btn._dark-blue {
+  background: #21576f;
+}
+body main header .main-navg {
+  text-align: center;
+}
+body main header .main-navg a {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #57c6d0;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin: 0 13px;
+}
+body main header .main-navg a:hover {
+  color: #bd9c57;
+}
+body main header .main-navg a.active {
+  color: #bd9c57;
+  font-weight: bold;
+}
+body main header .main-navg a.active:before {
+  content: "•";
+  margin: -6px 6px 0 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 .icon {
   padding: 0px;
