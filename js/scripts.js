@@ -3,6 +3,16 @@ $(function(){
 		var bmaxima = {
 	        init: function() {
 	            this.carrossel();
+	            $( "body main section.content._simulator .container div .timeline i" ).draggable({
+	            	axis: "x", containment: "body main section.content._simulator .container div .timeline", scroll: false,
+	            	drag: function( event, ui ) {
+					    // Keep the left edge of the element
+					    // at least 100 pixels from the container
+					    //console.log(ui.position.left = Math.min( 460, ui.position.left ) );
+					    $(this).closest('div').find('.currency').html( ui.position.left );
+					    // = Math.min( 100, ui.position.left );
+					}
+	            });
 	        },
 	        menu: function() {
         		var _opnd, _c;

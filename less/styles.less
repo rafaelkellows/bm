@@ -1,42 +1,49 @@
 ﻿@charset "utf-8";
 @font-face {
-  font-family: 'Lato';
-  src: url('../fonts/Lato/Lato-Light.woff') format('woff'),
-       url('../fonts/Lato/Lato-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/Lato/Lato-Bold.woff') format('woff'),
-       url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/Lato/Lato-Regular.woff') format('woff'),
-       url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-family: 'Lato-Thin';
+  src: url('fonts/Lato/Lato-Thin.eot?#iefix') format('embedded-opentype'),  url('fonts/Lato/Lato-Thin.woff') format('woff'), url('fonts/Lato/Lato-Thin.ttf')  format('truetype'), url('fonts/Lato/Lato-Thin.svg#Lato-Thin') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'Lato';
-  src: url('../fonts/Lato/Lato-Medium.woff') format('woff'),
-       url('../fonts/Lato/Lato-Medium.ttf') format('truetype');
-  font-weight: 500;
+  font-family: 'Lato-Light';
+  src: url('fonts/Lato/Lato-Light.eot?#iefix') format('embedded-opentype'),  url('fonts/Lato/Lato-Light.woff') format('woff'), url('fonts/Lato/Lato-Light.ttf')  format('truetype'), url('fonts/Lato/Lato-Light.svg#Lato-Light') format('svg');
+  font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('fonts/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),  url('fonts/Lato/Lato-Regular.woff') format('woff'), url('fonts/Lato/Lato-Regular.ttf')  format('truetype'), url('fonts/Lato/Lato-Regular.svg#Lato-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Medium';
+  src: url('fonts/Lato/Lato-Medium.eot?#iefix') format('embedded-opentype'),  url('fonts/Lato/Lato-Medium.woff') format('woff'), url('fonts/Lato/Lato-Medium.ttf')  format('truetype'), url('fonts/Lato/Lato-Medium.svg#Lato-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('fonts/Lato/Lato-Bold.eot?#iefix') format('embedded-opentype'),  url('fonts/Lato/Lato-Bold.woff') format('woff'), url('fonts/Lato/Lato-Bold.ttf')  format('truetype'), url('fonts/Lato/Lato-Bold.svg#Lato-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*******************************
             GLOBAL
 *******************************/
 body, html, div, span, a, img, ul, li, dl, dt, dd, article, section, header, p, form, fieldset, button, input, iframe{border: none; margin: 0; padding: 0; list-style: none; position: relative; text-decoration: none; outline: none; }
 header, section, footer, aside, nav, main, article, figure, a, img, span, :after, :before { display: block; }
-h1,h2,h3,h4,h5,h6{margin: 0; padding: 0; font-weight: normal;}
+h1,h2,h3,h4,h5,h6,strong{margin: 0; padding: 0; font-weight: normal;}
 ::-webkit-input-placeholder { color:#888888; font-weight: normal; } input:-moz-placeholder { color:#888888; font-weight: normal; } textarea:-moz-placeholder { color:#888888; font-weight: normal; }​
 
-h1, h2, h3, h4, h5, h6{ font-family: "Lato"; font-weight: 300; }
-body, input, textarea, select{ font-family: "Lato"; font-weight: normal; } 
+h1, h2, h3, h4, h5, h6{ font-family: "Lato-Light"; }
+body, input, textarea, select{ font-family: "Lato-Regular"; } 
 
 //General Colors
 @light-blue: #57c6d0;
@@ -49,12 +56,10 @@ body, input, textarea, select{ font-family: "Lato"; font-weight: normal; }
 .btns{
   color: #fff; text-transform: uppercase;
 }
-.d-inline_v-middle{ 
-  display: inline-block; vertical-align: middle;
-}
-.d-inline_v-top{ 
-  display: inline-block; vertical-align: top;
-}
+.d-inline_v-top{ display: inline-block; vertical-align: top; }
+.d-inline_v-middle{ display: inline-block; vertical-align: middle; }
+.d-inline_v-bottom{ display: inline-block; vertical-align: bottom; }
+
 .transit{ -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
 .btn{
   font-size: 16.5px; .btns; text-align: center; margin: 4.5px 0; padding: 7px; box-sizing: border-box;
@@ -68,10 +73,10 @@ body, input, textarea, select{ font-family: "Lato"; font-weight: normal; }
             STRUTUCTURE
 *******************************/
 body{
-  margin: 0; padding:0; border: 0;
-  *{ font-family: 'Lato'; font-weight: 400; font-style: normal; } 
+  margin: 0; padding:0; border: 0; /*background: url('../images/psd/site_resp_01_home-8-1140.jpg') no-repeat center -16px*/;
+  *{ font-family: 'Lato-Regular'; } 
   main{ 
-    width: 100%;
+    width: 100%; /*opacity: 0.5;*/
     &:before{
       content:''; background-color: @light-blue; width: 100%; height: 31px; position: absolute; left:0; top: 0;
     }
@@ -104,12 +109,12 @@ body{
       }
 
       .main-navg{
-        text-align: center; padding: 15px 0px 40px;
+        text-align: center; padding: 21px 0px 38px;
         a{ 
-          .d-inline_v-middle; .transit; font-size: 18px; color: @light-blue; text-transform: uppercase; letter-spacing: -0.5px; margin:0 13px; 
+          .d-inline_v-middle; .transit; font-size: 16.5px; color: @light-blue; text-transform: uppercase; margin:0 13px; 
           &:hover{ color: @brown; } 
           &.active{ 
-            color: @brown; font-weight: bold;
+            color: @brown; font-family: 'Lato-Bold';
             &:before{ content: "•"; margin:-6px 6px 0 0; .d-inline_v-middle; } 
           }
         }
@@ -126,12 +131,12 @@ body{
               content:''; width: 100%; height: 100%; position: absolute; z-index: 1; left:0; top: 0px; border-radius: 485px; opacity: .5;
             }
             h2{ 
-              font-size: 42.5px; line-height: 42.5px; color: #fff; text-transform: uppercase;  z-index: 9; position: absolute; bottom: 76px; left: 15px; width: 540px;
+              font-size: 42.8px; line-height: 42.5px; color: #fff; text-transform: uppercase;  z-index: 9; position: absolute; bottom: 76px; left: 15px; width: 540px;
               a{ 
                 color: #fff;
                 span{ 
                   display: inline;
-                  &:after{ content:'saiba'; .d-inline_v-middle; text-transform: lowercase; color:#fff; font-size: 17.5px; margin:0 10px -10px; }
+                  &:after{ content:'saiba'; .d-inline_v-middle; text-transform: lowercase; color:#fff; font-size: 17.4px; margin:0 10px -10px; }
                 }
                 &:after{ content:'•'; .d-inline_v-middle; border:2px solid #fff; width: 12px; height:12px; border-radius:12px; font-size: 14px; line-height: 12px; text-align: center; margin: 0 -8px -12px; }
               }
@@ -140,7 +145,7 @@ body{
               &.wrap-03{ width: 650px; }
             }
             p{
-              background-color: @light-blue; font-size: 16.5px; line-height: 26px; color: #fff; z-index: 9; position: absolute; bottom: 28px; left: 15px; padding:0 8px; white-space: nowrap;
+              background-color: @light-blue; font-size: 17.4px; line-height: 26px; color: #fff; z-index: 9; position: absolute; bottom: 28px; left: 15px; padding:0 8px; white-space: nowrap;
               a{ color: #fff; }
             }
           }
@@ -158,35 +163,64 @@ body{
           &._left dt{ right: 50%; }
         }
         .owl-controls{
-          margin-top: -2.5%; margin-bottom: 2.5%;
+          position: absolute; bottom: 10px; z-index: 9; text-align: center; width: 100%;
           .owl-dot{
             > span{ .transit; }
           }
         }
       }
       &.content{
-        
-        &._blocks{
-          text-align: center; padding: 0 8%;
+        padding: 34px 0 0;
+        &._blocks{ text-align: center; }
+        h3{ 
+          font-size: 16.85px; text-transform: uppercase; font-family: 'Lato-Bold'; color:@brown; position: relative; display: inline; margin: 0 auto;
+          &:before{ content:''; border:2px solid @brown; border-radius: 10px; width: 6px; height: 6px; display: inline-block; vertical-align: middle; margin:-3px 3px 0 }
+          &:after{ content: ''; background: @brown; width: 6px; height: 2px; vertical-align: middle; margin: -3px 3px 0; position: absolute; left: -100%; width: 100%; z-index: 999; top: 10px; }
         }
-        h3{ font-size: 16.5px; text-transform: uppercase; font-weight: bold; color:@brown; }
         nav{ 
-          padding:40px; font-size:0; 
+          padding:37px 0 44px; font-size:0; 
           a{
-            width: 210px; .d-inline_v-middle; margin: 0 6px;
+            width: 210px; .d-inline_v-middle; margin: 0 6px; padding: 11px; font-size: 20.9px; line-height: 20.9px;
           }
         }
         dl{ 
-          .d-inline_v-top; position: relative; text-align: left; margin:0 16px 50px; overflow: hidden; font-size: 0; width: 355px;
+          .d-inline_v-top; position: relative; text-align: left; margin:0 16px 40px; overflow: hidden; font-size: 0; width: 355px;
           dt{
-            img{ padding-bottom: 20px; }
+            img{ padding-bottom: 17px; }
             h4, h4 *{
-              font-size: 12.5px; font-weight: bold; text-transform: uppercase; color:@light-blue;
+              font-size: 12.2px; font-family: 'Lato-Bold'; text-transform: uppercase; color:@light-blue;
             }
           }
           dd{ 
             p, p *{
-              font-size: 12.5px; font-weight: 500; color:@dark-blue;
+              font-size: 12px; font-family: 'Lato-Medium'; color:@dark-blue;
+            }
+          }
+        }
+        &._simulator{
+          text-align: center;
+          .container{
+            max-width: 610px; margin: 0 auto;
+            p{
+              text-align: left; padding: 4px 0;
+              strong{ font-size:18px; font-family: 'Lato-Bold'; color:@dark-blue; }
+            }
+            div{
+              font-size: 0;
+              .timeline{ 
+                width: 460px; .d-inline_v-middle; position: relative;
+                &:before{ content:''; background:#c7c7c7; height: 2px; width: 100%; .d-inline_v-middle; }
+                i{ position: absolute; left: 0; top: -12px; width: 23px; height: 23px; border-radius: 23px; box-sizing: border-box; background-color: @dark-blue; cursor: pointer; }
+              }
+              .currency, .month{ 
+                min-width: 150px; .d-inline_v-middle; font-size: 30px; font-family: "Lato-Bold"; color: @dark-blue; 
+              }
+              .currency{ 
+                &:before{ content: "R$"; padding-right: 4px; font-size: 14px; .d-inline_v-middle; }
+              }
+              .month{ 
+                &:after{ content: "meses"; padding-left: 4px; font-size: 14px; .d-inline_v-middle; }
+              }
             }
           }
         }

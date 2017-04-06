@@ -1,26 +1,32 @@
 @charset "utf-8";
 @font-face {
-  font-family: 'Lato';
-  src: url('../fonts/Lato/Lato-Light.woff') format('woff'), url('../fonts/Lato/Lato-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/Lato/Lato-Bold.woff') format('woff'), url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/Lato/Lato-Regular.woff') format('woff'), url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-family: 'Lato-Thin';
+  src: url('fonts/Lato/Lato-Thin.eot?#iefix') format('embedded-opentype'), url('fonts/Lato/Lato-Thin.woff') format('woff'), url('fonts/Lato/Lato-Thin.ttf') format('truetype'), url('fonts/Lato/Lato-Thin.svg#Lato-Thin') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('../fonts/Lato/Lato-Medium.woff') format('woff'), url('../fonts/Lato/Lato-Medium.ttf') format('truetype');
-  font-weight: 500;
+  font-family: 'Lato-Light';
+  src: url('fonts/Lato/Lato-Light.eot?#iefix') format('embedded-opentype'), url('fonts/Lato/Lato-Light.woff') format('woff'), url('fonts/Lato/Lato-Light.ttf') format('truetype'), url('fonts/Lato/Lato-Light.svg#Lato-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('fonts/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/Lato/Lato-Regular.woff') format('woff'), url('fonts/Lato/Lato-Regular.ttf') format('truetype'), url('fonts/Lato/Lato-Regular.svg#Lato-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato-Medium';
+  src: url('fonts/Lato/Lato-Medium.eot?#iefix') format('embedded-opentype'), url('fonts/Lato/Lato-Medium.woff') format('woff'), url('fonts/Lato/Lato-Medium.ttf') format('truetype'), url('fonts/Lato/Lato-Medium.svg#Lato-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('fonts/Lato/Lato-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/Lato/Lato-Bold.woff') format('woff'), url('fonts/Lato/Lato-Bold.ttf') format('truetype'), url('fonts/Lato/Lato-Bold.svg#Lato-Bold') format('svg');
+  font-weight: normal;
   font-style: normal;
 }
 /*******************************
@@ -74,7 +80,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+strong {
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -97,15 +104,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato";
-  font-weight: 300;
+  font-family: "Lato-Light";
 }
 body,
 input,
 textarea,
 select {
-  font-family: "Lato";
-  font-weight: normal;
+  font-family: "Lato-Regular";
 }
 .max-width {
   max-width: 1140px;
@@ -115,13 +120,17 @@ select {
   color: #fff;
   text-transform: uppercase;
 }
+.d-inline_v-top {
+  display: inline-block;
+  vertical-align: top;
+}
 .d-inline_v-middle {
   display: inline-block;
   vertical-align: middle;
 }
-.d-inline_v-top {
+.d-inline_v-bottom {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 .transit {
   -webkit-transition: all 0.3s;
@@ -153,14 +162,14 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  /*background: url('../images/psd/site_resp_01_home-8-1140.jpg') no-repeat center -16px*/
 }
 body * {
-  font-family: 'Lato';
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Lato-Regular';
 }
 body main {
   width: 100%;
+  /*opacity: 0.5;*/
 }
 body main:before {
   content: '';
@@ -224,7 +233,7 @@ body main header .logo-info .li-navg {
 }
 body main header .main-navg {
   text-align: center;
-  padding: 15px 0px 40px;
+  padding: 21px 0px 38px;
 }
 body main header .main-navg a {
   display: inline-block;
@@ -232,10 +241,9 @@ body main header .main-navg a {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  font-size: 18px;
+  font-size: 16.5px;
   color: #57c6d0;
   text-transform: uppercase;
-  letter-spacing: -0.5px;
   margin: 0 13px;
 }
 body main header .main-navg a:hover {
@@ -243,7 +251,7 @@ body main header .main-navg a:hover {
 }
 body main header .main-navg a.active {
   color: #bd9c57;
-  font-weight: bold;
+  font-family: 'Lato-Bold';
 }
 body main header .main-navg a.active:before {
   content: "•";
@@ -274,7 +282,7 @@ body main section.carrossel dl dt:before {
   opacity: .5;
 }
 body main section.carrossel dl dt h2 {
-  font-size: 42.5px;
+  font-size: 42.8px;
   line-height: 42.5px;
   color: #fff;
   text-transform: uppercase;
@@ -296,7 +304,7 @@ body main section.carrossel dl dt h2 a span:after {
   vertical-align: middle;
   text-transform: lowercase;
   color: #fff;
-  font-size: 17.5px;
+  font-size: 17.4px;
   margin: 0 10px -10px;
 }
 body main section.carrossel dl dt h2 a:after {
@@ -323,7 +331,7 @@ body main section.carrossel dl dt h2.wrap-03 {
 }
 body main section.carrossel dl dt p {
   background-color: #57c6d0;
-  font-size: 16.5px;
+  font-size: 17.4px;
   line-height: 26px;
   color: #fff;
   z-index: 9;
@@ -349,26 +357,57 @@ body main section.carrossel dl._left dt {
   right: 50%;
 }
 body main section.carrossel .owl-controls {
-  margin-top: -2.5%;
-  margin-bottom: 2.5%;
+  position: absolute;
+  bottom: 10px;
+  z-index: 9;
+  text-align: center;
+  width: 100%;
 }
 body main section.carrossel .owl-controls .owl-dot > span {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+body main section.content {
+  padding: 34px 0 0;
+}
 body main section.content._blocks {
   text-align: center;
-  padding: 0 8%;
 }
 body main section.content h3 {
-  font-size: 16.5px;
+  font-size: 16.85px;
   text-transform: uppercase;
-  font-weight: bold;
+  font-family: 'Lato-Bold';
   color: #bd9c57;
+  position: relative;
+  display: inline;
+  margin: 0 auto;
+}
+body main section.content h3:before {
+  content: '';
+  border: 2px solid #bd9c57;
+  border-radius: 10px;
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -3px 3px 0;
+}
+body main section.content h3:after {
+  content: '';
+  background: #bd9c57;
+  width: 6px;
+  height: 2px;
+  vertical-align: middle;
+  margin: -3px 3px 0;
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  z-index: 999;
+  top: 10px;
 }
 body main section.content nav {
-  padding: 40px;
+  padding: 37px 0 44px;
   font-size: 0;
 }
 body main section.content nav a {
@@ -376,32 +415,102 @@ body main section.content nav a {
   display: inline-block;
   vertical-align: middle;
   margin: 0 6px;
+  padding: 11px;
+  font-size: 20.9px;
+  line-height: 20.9px;
 }
 body main section.content dl {
   display: inline-block;
   vertical-align: top;
   position: relative;
   text-align: left;
-  margin: 0 16px 50px;
+  margin: 0 16px 40px;
   overflow: hidden;
   font-size: 0;
   width: 355px;
 }
 body main section.content dl dt img {
-  padding-bottom: 20px;
+  padding-bottom: 17px;
 }
 body main section.content dl dt h4,
 body main section.content dl dt h4 * {
-  font-size: 12.5px;
-  font-weight: bold;
+  font-size: 12.2px;
+  font-family: 'Lato-Bold';
   text-transform: uppercase;
   color: #57c6d0;
 }
 body main section.content dl dd p,
 body main section.content dl dd p * {
-  font-size: 12.5px;
-  font-weight: 500;
+  font-size: 12px;
+  font-family: 'Lato-Medium';
   color: #21576f;
+}
+body main section.content._simulator {
+  text-align: center;
+}
+body main section.content._simulator .container {
+  max-width: 610px;
+  margin: 0 auto;
+}
+body main section.content._simulator .container p {
+  text-align: left;
+  padding: 4px 0;
+}
+body main section.content._simulator .container p strong {
+  font-size: 18px;
+  font-family: 'Lato-Bold';
+  color: #21576f;
+}
+body main section.content._simulator .container div {
+  font-size: 0;
+}
+body main section.content._simulator .container div .timeline {
+  width: 460px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+body main section.content._simulator .container div .timeline:before {
+  content: '';
+  background: #c7c7c7;
+  height: 2px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+body main section.content._simulator .container div .timeline i {
+  position: absolute;
+  left: 0;
+  top: -12px;
+  width: 23px;
+  height: 23px;
+  border-radius: 23px;
+  box-sizing: border-box;
+  background-color: #21576f;
+  cursor: pointer;
+}
+body main section.content._simulator .container div .currency,
+body main section.content._simulator .container div .month {
+  min-width: 150px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 30px;
+  font-family: "Lato-Bold";
+  color: #21576f;
+}
+body main section.content._simulator .container div .currency:before {
+  content: "R$";
+  padding-right: 4px;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body main section.content._simulator .container div .month:after {
+  content: "meses";
+  padding-left: 4px;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
 }
 .icon {
   padding: 0px;
