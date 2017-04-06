@@ -119,6 +119,33 @@ select {
   display: inline-block;
   vertical-align: middle;
 }
+.d-inline_v-top {
+  display: inline-block;
+  vertical-align: top;
+}
+.transit {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn {
+  font-size: 16.5px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 4.5px 0;
+  padding: 7px;
+  box-sizing: border-box;
+}
+.btn._brown {
+  background: #bd9c57;
+}
+.btn._dark-blue {
+  background: #21576f;
+}
+.btn._light-blue {
+  background: #57c6d0;
+}
 /*******************************
             STRUTUCTURE
 *******************************/
@@ -129,7 +156,7 @@ body {
 }
 body * {
   font-family: 'Lato';
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 body main {
@@ -160,7 +187,6 @@ body main header .top-navg > nav a {
   color: #fff;
   font-size: 16.5px;
   line-height: 31px;
-  font-weight: 300;
   text-transform: uppercase;
   display: inline-block;
   vertical-align: middle;
@@ -196,27 +222,16 @@ body main header .logo-info .li-navg {
   min-width: 173px;
   margin-left: calc(100% - 727px);
 }
-body main header .logo-info .li-navg .btn {
-  font-size: 16.5px;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 4.5px 0;
-  padding: 7px;
-  box-sizing: border-box;
-}
-body main header .logo-info .li-navg .btn._brown {
-  background: #bd9c57;
-}
-body main header .logo-info .li-navg .btn._dark-blue {
-  background: #21576f;
-}
 body main header .main-navg {
   text-align: center;
+  padding: 15px 0px 40px;
 }
 body main header .main-navg a {
   display: inline-block;
   vertical-align: middle;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   font-size: 18px;
   color: #57c6d0;
   text-transform: uppercase;
@@ -235,6 +250,158 @@ body main header .main-navg a.active:before {
   margin: -6px 6px 0 0;
   display: inline-block;
   vertical-align: middle;
+}
+body main section.carrossel dl {
+  position: relative;
+}
+body main section.carrossel dl dt {
+  position: absolute;
+  top: 4%;
+  z-index: 999;
+  width: 485px;
+  height: 485px;
+  z-index: 1;
+}
+body main section.carrossel dl dt:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0px;
+  border-radius: 485px;
+  opacity: .5;
+}
+body main section.carrossel dl dt h2 {
+  font-size: 42.5px;
+  line-height: 42.5px;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 9;
+  position: absolute;
+  bottom: 76px;
+  left: 15px;
+  width: 540px;
+}
+body main section.carrossel dl dt h2 a {
+  color: #fff;
+}
+body main section.carrossel dl dt h2 a span {
+  display: inline;
+}
+body main section.carrossel dl dt h2 a span:after {
+  content: 'saiba';
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: lowercase;
+  color: #fff;
+  font-size: 17.5px;
+  margin: 0 10px -10px;
+}
+body main section.carrossel dl dt h2 a:after {
+  content: '•';
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid #fff;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 12px;
+  text-align: center;
+  margin: 0 -8px -12px;
+}
+body main section.carrossel dl dt h2.wrap-01 {
+  width: 580px;
+}
+body main section.carrossel dl dt h2.wrap-02 {
+  width: 450px;
+}
+body main section.carrossel dl dt h2.wrap-03 {
+  width: 650px;
+}
+body main section.carrossel dl dt p {
+  background-color: #57c6d0;
+  font-size: 16.5px;
+  line-height: 26px;
+  color: #fff;
+  z-index: 9;
+  position: absolute;
+  bottom: 28px;
+  left: 15px;
+  padding: 0 8px;
+  white-space: nowrap;
+}
+body main section.carrossel dl dt p a {
+  color: #fff;
+}
+body main section.carrossel dl.dl-light-blue dt:before {
+  background-color: #57c6d0;
+}
+body main section.carrossel dl.dl-brown dt:before {
+  background-color: #bd9c57;
+}
+body main section.carrossel dl._right dt {
+  left: 50%;
+}
+body main section.carrossel dl._left dt {
+  right: 50%;
+}
+body main section.carrossel .owl-controls {
+  margin-top: -2.5%;
+  margin-bottom: 2.5%;
+}
+body main section.carrossel .owl-controls .owl-dot > span {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+body main section.content._blocks {
+  text-align: center;
+  padding: 0 8%;
+}
+body main section.content h3 {
+  font-size: 16.5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #bd9c57;
+}
+body main section.content nav {
+  padding: 40px;
+  font-size: 0;
+}
+body main section.content nav a {
+  width: 210px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 6px;
+}
+body main section.content dl {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  text-align: left;
+  margin: 0 16px 50px;
+  overflow: hidden;
+  font-size: 0;
+  width: 355px;
+}
+body main section.content dl dt img {
+  padding-bottom: 20px;
+}
+body main section.content dl dt h4,
+body main section.content dl dt h4 * {
+  font-size: 12.5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #57c6d0;
+}
+body main section.content dl dd p,
+body main section.content dl dd p * {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #21576f;
 }
 .icon {
   padding: 0px;
