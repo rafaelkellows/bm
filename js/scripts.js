@@ -3,16 +3,7 @@ $(function(){
 		var bmaxima = {
 	        init: function() {
 	            this.carrossel();
-	            $( "body main section.content._simulator .container div .timeline i" ).draggable({
-	            	axis: "x", containment: "body main section.content._simulator .container div .timeline", scroll: false,
-	            	drag: function( event, ui ) {
-					    // Keep the left edge of the element
-					    // at least 100 pixels from the container
-					    //console.log(ui.position.left = Math.min( 460, ui.position.left ) );
-					    $(this).closest('div').find('.currency').html( ui.position.left );
-					    // = Math.min( 100, ui.position.left );
-					}
-	            });
+	            this.simulator();
 	        },
 	        menu: function() {
         		var _opnd, _c;
@@ -71,6 +62,40 @@ $(function(){
 					singleItem:true,
 					autoPlay:4000
 				}); 
+	        },
+	        simulator: function () {
+	        	var line_width = 417, _e, _l, _d; //440 timeline width minus 23px bullter with
+	        	var estimated = ['100.000','200.000','300.000','400.000','500.000','600.000','700.000','800.000','900.000','1.000.000'];
+	        	var loan = ['50.000','100.000','150.000','200.000','250.000','300.000','350.000','400.000','450.000','500.000','550.000','600.000','650.000','700.000','750.000','800.000','850.000','900.000','950.000','1.000.000'];
+	        	var deadline = ['3','6','9','12','15','18','21','24','27','30','33','36'];
+	            var set_total = function(){
+	            	$("body main section.content._simulator .container div.total .currency").html(parseInt(_l/_d).toFixed(2));
+	            }
+	            $("body main section.content._simulator .container div.estimated .timeline i").draggable({
+	            	axis: "x", containment: "body main section.content._simulator .container div.estimated .timeline", scroll: false,
+	            	drag: function( event, ui ) {
+					    $(this).closest('div').find('.currency').html( estimated[parseInt(ui.position.left / (line_width/estimated.length) )] );
+					    _e = estimated[parseInt(ui.position.left / (line_width/estimated.length) )]
+					    set_total();
+					}
+	            });
+	            $("body main section.content._simulator .container div.loan .timeline i").draggable({
+	            	axis: "x", containment: "body main section.content._simulator .container div.loan .timeline", scroll: false,
+	            	drag: function( event, ui ) {
+					    $(this).closest('div').find('.currency').html( loan[parseInt(ui.position.left / (line_width/loan.length) )] );
+					    _l = loan[parseInt(ui.position.left / (line_width/loan.length) )]
+					    set_total();
+					}
+	            });
+	            $("body main section.content._simulator .container div.deadline .timeline i").draggable({
+	            	axis: "x", containment: "body main section.content._simulator .container div.deadline .timeline", scroll: false,
+	            	drag: function( event, ui ) {
+					    $(this).closest('div').find('.month').html( deadline[parseInt(ui.position.left / (line_width/deadline.length) )] );
+					    _d = deadline[parseInt(ui.position.left / (line_width/deadline.length) )]
+					    set_total();
+					}
+	            });
+	            _e = estimated[0],_l = loan[0],_d = deadline[0];
 	        }
 	    }
 		bmaxima.init();
