@@ -2,6 +2,7 @@ $(function(){
 	(function() {
 		var bmaxima = {
 	        init: function() {
+	            this.toTop();
 	            this.carrossel();
 	            this.simulator();
 	        },
@@ -17,15 +18,13 @@ $(function(){
 	        	);
 	        },
 	        toTop : function(elem){
-		        var offset = 1;
+		        var offset = 180;
 		        var duration = 500;
 		        jQuery(window).scroll(function() {
-					if( !$('body main').attr('id') ){ //&& $(window).width() > 1024 
-						if (jQuery(this).scrollTop() > offset) {
-							$('body main').addClass('internal');
-						} else {
-							$('body main').removeClass('internal');
-						}
+					if (jQuery(this).scrollTop() > offset) {
+						$('body main header').addClass('minus');
+					} else {
+						$('body main header').removeClass('minus');
 					}
 				});
 		        jQuery(elem).click(function(event) {

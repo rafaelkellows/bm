@@ -198,6 +198,10 @@ body main header {
 }
 body main header .top-navg {
   text-align: center;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  overflow: hidden;
 }
 body main header .top-navg > nav {
   display: inline-block;
@@ -231,6 +235,9 @@ body main header .top-navg > nav.tr-navg a i {
 }
 body main header .logo-info {
   font-size: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 body main header .logo-info h1 {
   display: inline-block;
@@ -246,10 +253,17 @@ body main header .logo-info .li-navg {
 body main header .main-navg {
   text-align: center;
   padding: 21px 0px 38px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #fff;
 }
-body main header .main-navg a {
+body main header .main-navg li {
   display: inline-block;
   vertical-align: middle;
+  position: relative;
+}
+body main header .main-navg li a {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -258,18 +272,112 @@ body main header .main-navg a {
   text-transform: uppercase;
   margin: 0 13px;
 }
-body main header .main-navg a:hover {
+body main header .main-navg li a:hover {
   color: #bd9c57;
 }
-body main header .main-navg a.active {
+body main header .main-navg li a.active {
   color: #bd9c57;
   font-family: 'Lato-Bold';
 }
-body main header .main-navg a.active:before {
+body main header .main-navg li a.active:before {
   content: "•";
   margin: -6px 6px 0 0;
   display: inline-block;
   vertical-align: middle;
+}
+body main header .main-navg li ul {
+  display: none;
+  z-index: 99;
+  padding: 0 0 10px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+body main header .main-navg li ul li {
+  text-align: left;
+  width: 100%;
+  background-color: #fff;
+}
+body main header .main-navg li ul li a {
+  line-height: 25px;
+  font-size: 14.5px;
+  white-space: nowrap;
+}
+body main header .main-navg li ul li a:hover {
+  padding-left: 5px;
+}
+body main header .main-navg li ul li ul {
+  left: 99.9%;
+  border-left: 1px solid #57c6d0;
+  margin: 0 0;
+  padding: 0;
+}
+body main header .main-navg li ul li:hover > ul {
+  display: block;
+}
+body main header .main-navg li:hover > ul {
+  display: block;
+}
+body main header.minus {
+  padding-top: 290px;
+  z-index: 9999;
+}
+body main header.minus .top-navg {
+  display: none;
+}
+body main header.minus .logo-info {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 18px;
+  left: 8px;
+  text-align: center;
+}
+body main header.minus .logo-info h1 {
+  padding: 0;
+}
+body main header.minus .logo-info h1 img {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+}
+body main header.minus .logo-info .li-navg {
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  top: -4px;
+}
+body main header.minus .logo-info .li-navg a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  margin-left: 5px;
+}
+body main header.minus .logo-info .li-navg a._brown {
+  font-size: 0;
+}
+body main header.minus .logo-info .li-navg a._brown:before {
+  content: "\f234";
+  font: normal normal normal 18px/1 FontAwesome;
+}
+body main header.minus .logo-info .li-navg a._dark-blue {
+  font-size: 0;
+}
+body main header.minus .logo-info .li-navg a._dark-blue:before {
+  content: "\f090";
+  font: normal normal normal 18px/1 FontAwesome;
+}
+body main header.minus .main-navg {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 61px 0 21px;
+  border-bottom: 1px solid #dfdfdf;
 }
 body main section.carrossel dl {
   position: relative;
