@@ -93,7 +93,7 @@ body{
   main{ 
     width: 100%; /*opacity: 0.5;*/
     &:before{
-      content:''; background-color: @light-blue; width: 100%; height: 31px; position: absolute; left:0; top: 0;
+      content:''; background-color: @light-blue; width: 100%; height: 35px; position: absolute; left:0; top: 0;
     }
 
     header{
@@ -102,14 +102,14 @@ body{
       .top-navg{
         text-align: center; .transit; overflow: hidden;
         > nav{ 
-          .d-inline_v-middle; height: 31px;
-          a{ color: #fff; font-size:16.5px; line-height: 31px; text-transform: uppercase; .d-inline_v-middle; }
+          .d-inline_v-middle; height: 35px;
+          a{ color: #fff; font-size:16.5px; line-height: 35px; text-transform: uppercase; .d-inline_v-middle; .transit; }
           &.tl-navg{
-            a{ margin:0 45px; }
+            a{ margin:0 41px; }
           }
           &.tr-navg{
             a{ 
-              margin:2px 37px; text-align: center; font-size: 12px; width:24px; height: 24px; border: 2px solid #fff; border-radius: 24px; box-sizing: border-box; line-height: 20px;
+              margin:5px 37px; text-align: center; font-size: 12px; width:24px; height: 24px; border: 2px solid #fff; border-radius: 24px; box-sizing: border-box; line-height: 20px;
               i{ margin-top: -2px; }
             }
           }
@@ -125,7 +125,11 @@ body{
       }
 
       .main-navg{
-        text-align: center; padding: 21px 0px 38px; .transit; background: #fff; 
+        text-align: center; padding: 21px 0px 38px; .transit; background: #fff;
+        >a{ 
+          font-size: 0; display: none;
+          &:before{ content: "\f0c9"; font: normal normal normal 18px/1 FontAwesome; color: #fff; background-color: @light-blue; width: 35px; height: 35px; line-height: 35px; }
+        }
         li{
           .d-inline_v-middle; position: relative;
           a{ 
@@ -136,6 +140,7 @@ body{
               &:before{ content: "•"; margin:-6px 6px 0 0; .d-inline_v-middle; } 
             }
           }
+          /* First SubMenu */
           ul{
             display: none; z-index: 99; padding: 0 0 10px; background-color: #fff;
             position: absolute; left: 0; top: 0; margin-top: 15px; padding-top: 10px;
@@ -143,10 +148,9 @@ body{
               text-align: left; width: 100%; background-color: #fff;
               a{ 
                 line-height: 25px; font-size: 14.5px; white-space: nowrap; 
-                &:hover{
-                  padding-left:5px;
-                }
+                &:hover{ padding-left:5px; }
               }
+              /* Second SubMenu */
               ul{
                 left:99.9%; border-left:1px solid @light-blue; margin: 0 0; padding: 0;
               }
@@ -308,20 +312,19 @@ body{
         &._features{
           text-align: center; padding: 14px 0 0;
           .container{
-            font-size: 0; margin: 24px 0;
+            font-size: 0; margin: 24px 0; background-color: @light-blue; 
             > div{
-              width: 50%; .d-inline_v-top; overflow: hidden;
+              width: 50%; .d-inline_v-top; overflow: hidden; 
               &.no-bg{
-                height: 100%; background-color: @light-blue; 
+                height: 100%;
                 &:before{ content:''; position: relative; height: 100%; width: 0; .d-inline_v-middle; };
                 text-align: right; padding-right: 30px; box-sizing: border-box; 
-                img{ .d-inline_v-middle; margin: 30.5px 40px; }
-                p{ font-size: 32.4px; color:#fff; font-family: 'Lato-Light'; .d-inline_v-middle; text-align: left; line-height: 52.7px; }
+                img.ilustra{ position: absolute; left: 5%; top: calc(~"50% - 117px");  }
+                p{ font-size: 32.4px; color:#fff; font-family: 'Lato-Light'; text-align: left; line-height: 52.7px; position: absolute; top: calc(~"50% - 78px"); right: 5%; }
               }
               &.bg{
-                border-top:1px solid @light-blue; border-bottom:1px solid @light-blue;
                 p{ position: absolute; font-size: 12.5px; width: 250px; font-family: 'Lato-Bold'; text-transform: uppercase; z-index: 9; color:@dark-blue; text-align: left; padding:92px 136px; }
-                img{ margin:1px;  }
+                img{ margin:1px; max-height: 290px;  }
               }
             }
           }
@@ -330,8 +333,8 @@ body{
           text-align: center; padding: 22px 0 0;
           .container{ 
             text-align: right; margin: 18px 0; 
-            iframe{
-              width: 472px; height: 265px; .d-inline_v-top;
+            iframe,video{
+              /*width: 472px; */height: 265px; .d-inline_v-top; border:1px solid @light-blue;
             }
             article{
               .d-inline_v-top; width: 50%; overflow: hidden;

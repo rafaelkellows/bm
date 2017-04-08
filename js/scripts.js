@@ -3,6 +3,7 @@ $(function(){
 		var bmaxima = {
 	        init: function() {
 	            this.toTop();
+	            this.rszWindow();
 	            this.carrossel();
 	            this.simulator();
 	        },
@@ -21,10 +22,12 @@ $(function(){
 		        var offset = 180;
 		        var duration = 500;
 		        jQuery(window).scroll(function() {
-					if (jQuery(this).scrollTop() > offset) {
-						$('body main header').addClass('minus');
-					} else {
-						$('body main header').removeClass('minus');
+					if( $(window).width() >= 1024 ){
+						if (jQuery(this).scrollTop() > offset) {
+							$('body main header').addClass('minus');
+						} else {
+							$('body main header').removeClass('minus');
+						}
 					}
 				});
 		        jQuery(elem).click(function(event) {
@@ -32,6 +35,13 @@ $(function(){
 					jQuery('html, body').animate({scrollTop: 0}, duration);
 					return false;
 		        })
+	        },
+	        rszWindow : function () {
+				$(window).resize(function() {
+					if ($(window).width() < 1024){
+						$('body main header').removeClass('minus'); 
+					}
+				});
 	        },
 	        carrossel: function() {
 				var owl = $("section.carrossel > div"); 
