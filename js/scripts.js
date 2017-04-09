@@ -6,6 +6,7 @@ $(function(){
 	            this.rszWindow();
 	            this.carrossel();
 	            this.simulator();
+	            this.contentsBreadCrumb();
 	        },
 	        menu: function() {
         		var _opnd, _c;
@@ -22,7 +23,7 @@ $(function(){
 		        var offset = 180;
 		        var duration = 500;
 		        jQuery(window).scroll(function() {
-					if( $(window).width() >= 1024 ){
+					if( $(window).width() > 1024 ){
 						if (jQuery(this).scrollTop() > offset) {
 							$('body main header').addClass('minus');
 						} else {
@@ -105,6 +106,29 @@ $(function(){
 					}
 	            });
 	            _e = estimated[0],_l = loan[0],_d = deadline[0];
+	        },
+	        anchorPage : function(){
+	        	var _hash = location.hash;
+	        	return _hash;
+	        },
+	        contentsBreadCrumb: function () {
+	        	
+	        	var cnt = $('.contents');
+				var nav = $('.nav-contents, .main-navg');
+	        	if(!cnt.length) return;
+	        	if(!cnt.find("div[class^='cnt-']").length) return;
+				if(!bmaxima.anchorPage().length) {
+		        	$('.contents').find('>div').eq(0).show();
+		        	nav.find('li').first().find('a').addClass('active');
+				}else{
+					var _idlink = String(bmaxima.anchorPage().substring(1));
+		        	cnt.find(".cnt-"+_idlink).show();
+		        	nav.find('li a.'+_idlink).parent().addClass('active');
+				}
+	        	if(!nav.length) return;
+	        	nav.find('a').click(function(){
+	        		location.reload();
+	        	});
 	        }
 	    }
 		bmaxima.init();
