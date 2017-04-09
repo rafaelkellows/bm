@@ -117,8 +117,7 @@
           <h3>Máxima na Mídia</h3>
           
           <div class="container">
-            <!--iframe src="//www.youtube.com/embed/NMJXJngBxBc?wmode=transparent" id="gdlr-video-389887"></iframe-->
-            <video width="320" height="240" controls>
+            <video width="320" height="240" poster="images/placeholder.png"  controls>
                 <source src="credmaxima.mp4" type="video/mp4">
             </video>
             <article>

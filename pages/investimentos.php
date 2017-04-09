@@ -1,9 +1,9 @@
       <article>
         <!-- PAGE TITLE -->
         <h2>
-          <span>Institucional</span>
+          <span>Investimentos</span>
           <img class="graph" src="images/pages/grafico-institucional.png" alt="" />
-          <img src="images/pages/ilustra-institucional.jpg" alt="" />
+          <img src="images/pages/ilustra-investimentos.jpg" alt="" />
         </h2>
         <!-- BREAD CRUMB -->
         <ul class="nav-contents">
@@ -206,7 +206,7 @@
               </tbody>
             </table>
             <p>A rentabilidade divulgada não é líquida de impostos.</p>
-            <p><strong>Abaixo a tabela regressiva do Imposto de Renda:<strong></p>
+            <p><strong>Abaixo a tabela regressiva do Imposto de Renda:</strong></p>
             <table border="0" width="100%" cellpadding="0" cellspacing="0">
               <tbody>
                 <tr>
@@ -242,8 +242,7 @@
           <h3>Máxima na Mídia</h3>
           
           <div class="container">
-            <!--iframe src="//www.youtube.com/embed/NMJXJngBxBc?wmode=transparent" id="gdlr-video-389887"></iframe-->
-            <video width="320" height="240" controls>
+            <video width="320" height="240" poster="images/placeholder.png"  controls>
                 <source src="credmaxima.mp4" type="video/mp4">
             </video>
             <article>
@@ -271,6 +270,7 @@
             </article>
           </div>
         </aside>
+
       </article>
 
       <?php

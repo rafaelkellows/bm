@@ -149,7 +149,9 @@ $(function(){
 		        	if( $(window).width() > 768 ){
 		        		jQuery('html, body').animate({scrollTop: nav.find('li a.'+_idlink).offset().top  - 170}, 250);
 		        	}else{
-		        		jQuery('html, body').animate({scrollTop: 0}, 500);
+		        		setTimeout(function(){
+		        			jQuery('html, body').animate({scrollTop: 0}, 10);
+		        		},100);
 		        	}
 				}
 	        	if(!nav.length) return;

@@ -108,34 +108,9 @@
         </dl>
       </section>
 
-      <section class="content _simulator">
-        <h3>Simule aqui o seu Empréstimo com garantia de imóvel</h3>
-        <div class="container">
-          
-          <p><strong>Qual o valor estimado do seu imóvel?</strong></p>
-          <div class="estimated">
-            <span class="timeline"><i>&nbsp;</i></span>
-            <span class="currency">100.000</span>
-          </div>
-          
-          <p><strong>Valor do empréstimo</strong></p>
-          <div class="loan">
-            <span class="timeline"><i>&nbsp;</i></span>
-            <span class="currency">50.000</span>
-          </div>
-
-          <p><strong>Qual o prazo para pagamento?</strong></p>
-          <div class="deadline">
-            <span class="timeline"><i>&nbsp;</i></span>
-            <span class="month">3</span>
-          </div>
-
-          <p><strong>Valor da parcela</strong></p>
-          <div class="total">
-            <span class="currency">16.00</span>
-          </div>
-        </div>
-      </section>
+      <?php
+        @require_once('includes/content-simulator.php');
+      ?>
 
       <section class="content _features">
         <h3>O Banco Máxima</h3>
@@ -157,8 +132,7 @@
       <section class="content _midia">
         <h3>Máxima na Mídia</h3>
         <div class="container">
-          <!--iframe src="//www.youtube.com/embed/NMJXJngBxBc?wmode=transparent" id="gdlr-video-389887"></iframe-->
-          <video width="320" height="240" controls>
+          <video width="320" height="240" poster="images/placeholder.png"  controls>
               <source src="credmaxima.mp4" type="video/mp4">
           </video>
           <article>

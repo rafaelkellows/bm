@@ -50,14 +50,14 @@
                 </ul>
               </li>
               <li>
-                <a class="emprestimos" href="javascript:void(0);" title="Empréstimos">Empréstimos</a>
+                <a class="emprestimos" href="emprestimos.php#credmaxima-emprestimo-com-garantia-imobiliaria" title="Empréstimos">Empréstimos</a>
                 <ul>
-                  <li><a href="/emprestimo-com-garantia-imobiliaria" class="sf-with-ul-pre sf-with-ul">CredMáxima</a>
+                  <li><a href="emprestimos.php#credmaxima-emprestimo-com-garantia-imobiliaria">CredMáxima</a>
                     <ul>
-                      <li><a href="/emprestimo-com-garantia-imobiliaria">Empréstimo com garantia imobiliária</a></li>
-                      <li><a href="/emprestimo-com-garantia-imobiliaria/como-funciona-o-emprestimo">Como Funciona o Empréstimo</a></li>
-                      <li><a href="/emprestimo-com-garantia-imobiliaria/documentacao-necessaria">Documentação Necessária</a></li>
-                      <li><a href="/simulador">Simulador</a></li>
+                      <li><a href="emprestimos.php#credmaxima-emprestimo-com-garantia-imobiliaria">Empréstimo com garantia imobiliária</a></li>
+                      <li><a href="emprestimos.php#credmaxima-como-funciona-o-emprestimo">Como Funciona o Empréstimo</a></li>
+                      <li><a href="emprestimos.php#credmaxima-documentacao-necessaria">Documentação Necessária</a></li>
+                      <li><a href="emprestimos.php#credmaxima-simulador">Simulador</a></li>
                     </ul>
                   </li>
                   <li><a href="/simulador">Simulador de Empréstimo</a></li>

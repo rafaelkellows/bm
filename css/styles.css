@@ -136,6 +136,10 @@ ul.list._bullets li {
   list-style-type: disc;
   margin-left: 25px;
 }
+ul.list._decimal li {
+  list-style-type: decimal;
+  margin-left: 25px;
+}
 .d-inline_v-top {
   display: inline-block;
   vertical-align: top;
@@ -521,9 +525,9 @@ body main section.content._blocks {
   padding: 34px 0 0;
 }
 body main section.content h3 {
-  font-size: 16.85px;
+  font-size: 16.85px !important;
   text-transform: uppercase;
-  font-family: 'Lato-Bold';
+  font-family: 'Lato-Bold' !important;
   color: #bd9c57;
   position: relative;
   display: inline;
@@ -594,6 +598,7 @@ body main section.content dl dd p * {
 body main section.content._simulator {
   text-align: center;
   padding: 24px 0 0;
+  line-height: 24.2px;
 }
 body main section.content._simulator .container {
   max-width: 610px;
@@ -603,6 +608,8 @@ body main section.content._simulator .container {
 body main section.content._simulator .container p {
   text-align: left;
   padding: 4px 0;
+  margin: 0;
+  line-height: 35px;
 }
 body main section.content._simulator .container p strong {
   font-size: 18px;
@@ -618,6 +625,7 @@ body main section.content._simulator .container div .timeline {
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  line-height: 24.2px;
 }
 body main section.content._simulator .container div .timeline:before {
   content: '';
@@ -630,7 +638,7 @@ body main section.content._simulator .container div .timeline:before {
 body main section.content._simulator .container div .timeline i {
   position: absolute;
   left: 0;
-  top: -12px;
+  top: 0;
   width: 23px;
   height: 23px;
   border-radius: 23px;
@@ -683,6 +691,7 @@ body main section.content._simulator .container div.total {
 }
 body main section.content._simulator .container div.total .currency {
   color: #fff;
+  min-width: auto;
 }
 body main section.content._simulator .container div.total .currency:before {
   font-size: 30px;
@@ -762,8 +771,8 @@ body main section.content._midia .container {
 }
 body main section.content._midia .container iframe,
 body main section.content._midia .container video,
-body main article aside .container iframe,
-body main article aside .container video {
+body main article > aside .container iframe,
+body main article > aside .container video {
   /*width: 472px; */
   height: 265px;
   display: inline-block;
@@ -783,7 +792,7 @@ body main section.content._midia .container article dl {
   box-sizing: border-box;
 }
 body main section.content._midia .container article dl:before,
-body main article aside .container article dl:before {
+body main article > aside .container article dl:before {
   content: '';
   background: url("../images/sprite.png") no-repeat 0 0;
   width: 26px;
@@ -799,7 +808,7 @@ body main section.content._midia .container article dl dt * {
   color: #21576f;
 }
 body main section.content._midia .container article dl dd,
-body main article aside .container article dl dd {
+body main article > aside .container article dl dd {
   font-size: 12.5px;
   font-family: "Lato-Regular";
   color: #21576f;
@@ -908,7 +917,7 @@ body main article > ul li a {
   font-size: 10.8px;
   line-height: 15.6px;
   color: #21576f;
-  padding: 10px;
+  padding: 10px 5px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -952,13 +961,16 @@ body main article .contents a {
 body main article .contents a:hover {
   color: #bd9c57;
 }
-body main article .contents p {
+body main article .contents p,
+body main article .contents div {
   margin: 2.5% 0;
 }
-body main article .contents p.img span {
+body main article .contents p.img span,
+body main article .contents div.img span {
   padding: 2.5% 7.5% 2.5% 5%;
 }
-body main article .contents p.img span:before {
+body main article .contents p.img span:before,
+body main article .contents div.img span:before {
   content: '';
   border: 2px solid #57c6d0;
   border-radius: 10px;
@@ -968,7 +980,8 @@ body main article .contents p.img span:before {
   right: 20px;
   top: 50px;
 }
-body main article .contents p.img span:after {
+body main article .contents p.img span:after,
+body main article .contents div.img span:after {
   content: '';
   background: #57c6d0;
   width: 6px;
@@ -979,28 +992,63 @@ body main article .contents p.img span:after {
   z-index: 1;
   top: 54px;
 }
-body main article .contents p.img span img {
+body main article .contents p.img span img,
+body main article .contents div.img span img {
   z-index: 9;
   position: relative;
 }
 body main article .contents p.img._f-left span,
-body main article .contents p.img._f-left em {
+body main article .contents div.img._f-left span,
+body main article .contents p.img._f-left em,
+body main article .contents div.img._f-left em {
   display: inline-block;
   vertical-align: middle;
 }
-body main article .contents p.img._f-left em {
+body main article .contents p.img._f-left > em,
+body main article .contents div.img._f-left > em,
+body main article .contents p.img._f-left > aside,
+body main article .contents div.img._f-left > aside {
   width: 40%;
 }
-body main article .contents p.img._v-middle span:before {
+body main article .contents p.img._f-right > span,
+body main article .contents div.img._f-right > span {
+  float: right;
+  padding: 2.5% 5% 2.5% 7.5%;
+}
+body main article .contents p.img._f-right > span:before,
+body main article .contents div.img._f-right > span:before {
+  right: initial;
+  left: 20px;
+}
+body main article .contents p.img._f-right > span:after,
+body main article .contents div.img._f-right > span:after {
+  right: initial;
+  left: 28px;
+}
+body main article .contents p.img._v-middle span:before,
+body main article .contents div.img._v-middle span:before {
   top: 50%;
 }
-body main article .contents p.img._v-middle span:after {
+body main article .contents p.img._v-middle span:after,
+body main article .contents div.img._v-middle span:after {
   top: calc(50% + 4px);
 }
-body main article .contents p.img._t-normal em {
+body main article .contents p.img._v-bottom span:before,
+body main article .contents div.img._v-bottom span:before {
+  bottom: 20%;
+  top: initial;
+}
+body main article .contents p.img._v-bottom span:after,
+body main article .contents div.img._v-bottom span:after {
+  bottom: calc(20% + 4px);
+  top: initial;
+}
+body main article .contents p.img._t-normal > em,
+body main article .contents div.img._t-normal > em {
   font-style: normal;
 }
-body main article .contents p.img:after {
+body main article .contents p.img:after,
+body main article .contents div.img:after {
   content: '';
   width: 100%;
   clear: both;
@@ -1029,10 +1077,21 @@ body main article .contents small {
 body main article .contents._aside {
   display: inline-block;
   vertical-align: top;
+  box-sizing: border-box;
+}
+body main article .contents._aside._yes {
   width: 66%;
   padding-left: 10%;
-  box-sizing: border-box;
   padding-right: 2.5%;
+}
+body main article .contents._aside._no {
+  width: 100%;
+  padding: 0 2.5%;
+  display: block;
+}
+body main article .contents._aside._no .img._f-left em,
+body main article .contents._aside._no .img._f-left aside {
+  width: calc(100% - 380px);
 }
 body main article .contents div[class^='cnt-'] {
   display: none;
@@ -1041,7 +1100,7 @@ body main article .contents div[class^='cnt-'] strong {
   font-family: "Lato-Bold";
   color: #57c6d0;
 }
-body main article aside {
+body main article > aside {
   display: inline-block;
   vertical-align: top;
   -webkit-transition: all 0.3s;
@@ -1052,44 +1111,44 @@ body main article aside {
   box-sizing: border-box;
   padding-left: 2.5%;
 }
-body main article aside .container {
+body main article > aside .container {
   text-align: left;
   margin: 18px 0;
 }
-body main article aside .container iframe,
-body main article aside .container video {
+body main article > aside .container iframe,
+body main article > aside .container video {
   width: 100%;
 }
-body main article aside .container article {
+body main article > aside .container article {
   display: inline-block;
   vertical-align: top;
   overflow: hidden;
   padding-top: 45px;
 }
-body main article aside .container article h4 {
+body main article > aside .container article h4 {
   text-transform: uppercase;
   color: #bd9c57;
   font-family: "Lato-Bold";
   font-size: 16.8px;
   line-height: 40px;
 }
-body main article aside .container article dl {
+body main article > aside .container article dl {
   width: 100%;
   margin: 0;
   padding: 0 0 28px 35px;
   box-sizing: border-box;
 }
-body main article aside .container article dl:before {
+body main article > aside .container article dl:before {
   top: 2px;
 }
-body main article aside .container article dl dt,
-body main article aside .container article dl dt * {
+body main article > aside .container article dl dt,
+body main article > aside .container article dl dt * {
   font-size: 17.8px;
   font-family: "Lato-Black";
   color: #21576f;
   line-height: 20.5px;
 }
-body main article aside .container article dl dd {
+body main article > aside .container article dl dd {
   line-height: 16px;
 }
 body main footer {
@@ -1130,7 +1189,7 @@ body main footer nav a:hover {
     z-index: 9;
   }
   body main header .main-navg nav {
-    display: block;
+    display: none;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -1259,8 +1318,8 @@ body main footer nav a:hover {
   body main section.content._midia .container iframe,
   body main section.content._midia .container video,
   body main section.content._midia .container article,
-  body main article aside .container iframe,
-  body main article aside .container video {
+  body main article > aside .container iframe,
+  body main article > aside .container video {
     /*width: 90%; margin:0 5%;*/
   }
   body main section.content._midia .container article {
@@ -1327,8 +1386,10 @@ body main footer nav a:hover {
     border-radius: 80px;
   }
   body main article .nav-contents li a {
-    padding: 5px;
+    /*padding: 5px;*/
+    padding: 1px;
     font-size: 9px;
+    line-height: 12px;
   }
   body main article .nav-contents li.active {
     z-index: 9999;
@@ -1346,20 +1407,34 @@ body main footer nav a:hover {
     margin: 16px -42px;
     left: 50px;
   }
-  body main article .contents p.img._f-left span,
-  body main article .contents p.img._f-left em {
+  body main article .contents._aside._no,
+  body main article .contents._aside._yes {
+    width: 100%;
+    padding: 10%;
+  }
+  body main article .contents._aside._no .img._f-left span,
+  body main article .contents._aside._yes .img._f-left span,
+  body main article .contents._aside._no .img._f-right span,
+  body main article .contents._aside._yes .img._f-right span,
+  body main article .contents._aside._no .img._f-left em,
+  body main article .contents._aside._yes .img._f-left em,
+  body main article .contents._aside._no .img._f-right em,
+  body main article .contents._aside._yes .img._f-right em,
+  body main article .contents._aside._no .img._f-left aside,
+  body main article .contents._aside._yes .img._f-left aside,
+  body main article .contents._aside._no .img._f-right aside,
+  body main article .contents._aside._yes .img._f-right aside {
     display: block;
     width: 100%;
     box-sizing: border-box;
   }
-  body main article .contents p.img._f-left span img {
+  body main article .contents._aside._no .img._f-left span img,
+  body main article .contents._aside._yes .img._f-left span img,
+  body main article .contents._aside._no .img._f-right span img,
+  body main article .contents._aside._yes .img._f-right span img {
     margin: 0 auto;
   }
-  body main article .contents._aside {
-    width: 100%;
-    padding: 10%;
-  }
-  body main article aside {
+  body main article > aside {
     width: 100%;
     padding: 10%;
   }
@@ -1375,8 +1450,8 @@ body main footer nav a:hover {
   body main section.content._midia .container iframe,
   body main section.content._midia .container video,
   body main section.content._midia .container article,
-  body main article aside .container iframe,
-  body main article aside .container video {
+  body main article > aside .container iframe,
+  body main article > aside .container video {
     width: 90%;
     margin: 0 5%;
   }
