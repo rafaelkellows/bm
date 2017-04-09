@@ -2,24 +2,15 @@ $(function(){
 	(function() {
 		var bmaxima = {
 	        init: function() {
-	            this.toTop();
+	        	this.menu();
+	            this.setHeader();
 	            this.rszWindow();
 	            this.carrossel();
 	            this.simulator();
 	            this.contentsBreadCrumb();
+	            this.setMinusBreadCrumb();
 	        },
-	        menu: function() {
-        		var _opnd, _c;
-	        	$('').click(function(){
-	        	
-	        	}).hover(
-	        		function(){	        			
-	        		},
-	        		function(){
-	        		}
-	        	);
-	        },
-	        toTop : function(elem){
+	        setHeader : function(elem){
 		        var offset = 180;
 		        var duration = 500;
 		        jQuery(window).scroll(function() {
@@ -31,17 +22,15 @@ $(function(){
 						}
 					}
 				});
-		        jQuery(elem).click(function(event) {
-					event.preventDefault();
-					jQuery('html, body').animate({scrollTop: 0}, duration);
-					return false;
-		        })
 	        },
 	        rszWindow : function () {
 				$(window).resize(function() {
+					//To Responsive Main Menu
 					if ($(window).width() < 1024){
 						$('body main header').removeClass('minus'); 
 					}
+					//To Responsive BreadCrumb
+					bmaxima.setMinusBreadCrumb();
 				});
 	        },
 	        carrossel: function() {
@@ -111,24 +100,77 @@ $(function(){
 	        	var _hash = location.hash;
 	        	return _hash;
 	        },
+	        menu: function() {
+        		var nav = $('header .main-navg');
+        		//Mobile Menu Event
+	        	nav.find('> a').click(function(e){
+	        		_nav = $(this).next('nav');
+	        		if( _nav.is(":visible") ){
+	        			$(this).removeClass('active').next('nav').hide();
+	        		}else{
+	        			$(this).addClass('active').next('nav').show();
+	        		}
+	        		//if( )
+	        		
+	        	});
+	        	nav.find('nav a').click(function(e){
+	        		//e.preventDefault();
+	        		location.reload();
+	        	});
+	        	if( $('body').attr('class') != undefined ){
+	        		if(!$("body[class^='page-']").length) return;
+	        		var _currpage = $('body').attr('class').substring(5);
+	        		$('body main header .main-navg li a').removeClass('active');
+	        		$('body main header .main-navg li a.'+_currpage).addClass('active');
+	        	}
+	        	
+	        },
+	        setMinusBreadCrumb : function () {
+				//To Responsive BreadCrumb
+				if( $(window).width() < 768 ){
+					$('body main article .nav-contents').addClass('minus');
+				} else {
+					$('body main article .nav-contents').removeClass('minus');
+				}
+			},
 	        contentsBreadCrumb: function () {
 	        	
 	        	var cnt = $('.contents');
-				var nav = $('.nav-contents, .main-navg');
+				var nav = $('.nav-contents');
 	        	if(!cnt.length) return;
 	        	if(!cnt.find("div[class^='cnt-']").length) return;
 				if(!bmaxima.anchorPage().length) {
 		        	$('.contents').find('>div').eq(0).show();
-		        	nav.find('li').first().find('a').addClass('active');
+		        	nav.find('li').eq(0).addClass('active');
 				}else{
 					var _idlink = String(bmaxima.anchorPage().substring(1));
 		        	cnt.find(".cnt-"+_idlink).show();
 		        	nav.find('li a.'+_idlink).parent().addClass('active');
+		        	if( $(window).width() > 768 ){
+		        		jQuery('html, body').animate({scrollTop: nav.find('li a.'+_idlink).offset().top  - 170}, 250);
+		        	}else{
+		        		jQuery('html, body').animate({scrollTop: 0}, 500);
+		        	}
 				}
 	        	if(!nav.length) return;
-	        	nav.find('a').click(function(){
-	        		location.reload();
+	        	nav.find('a').click(function(e){
+	        		if( $(window).width() < 768 ){
+	        			if( $(this).parent().attr('class') != undefined ){
+	        				if( $(this).parent().attr('class').indexOf('active') > -1 ){
+		        				e.preventDefault();
+		        				$(this).closest('.nav-contents').removeClass('minus');
+		        				return;
+	        				}
+	        			}
+		        		location.reload();
+	        		}else{
+		        		location.reload();
+	        		}
 	        	});
+	        },
+	        scrollTo : function(elem){
+				jQuery('html, body').animate({scrollTop: 0}, duration);
+				return false;
 	        }
 	    }
 		bmaxima.init();

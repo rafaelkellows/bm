@@ -132,6 +132,10 @@ select {
   color: #fff;
   text-transform: uppercase;
 }
+ul.list._bullets li {
+  list-style-type: disc;
+  margin-left: 25px;
+}
 .d-inline_v-top {
   display: inline-block;
   vertical-align: top;
@@ -268,6 +272,9 @@ body main header .main-navg > a {
   font-size: 0;
   display: none;
 }
+body main header .main-navg > a.active:before {
+  content: "\f00d";
+}
 body main header .main-navg > a:before {
   content: "\f0c9";
   font: normal normal normal 18px/1 FontAwesome;
@@ -324,7 +331,7 @@ body main header .main-navg li ul li {
 }
 body main header .main-navg li ul li a {
   line-height: 25px;
-  font-size: 14.5px;
+  font-size: 14px;
   white-space: nowrap;
 }
 body main header .main-navg li ul li a:hover {
@@ -871,12 +878,12 @@ body main article h2 img.graph {
   margin: 90px -217px 0 -500%;
   z-index: 1;
 }
-body main article ul {
+body main article > ul {
   font-size: 0;
   text-align: center;
   padding: 60px 0 60px;
 }
-body main article ul li {
+body main article > ul li {
   display: inline-block;
   vertical-align: middle;
   -webkit-transition: all 0.3s;
@@ -890,26 +897,26 @@ body main article ul li {
   text-transform: uppercase;
   border: 2px dotted #bd9c57;
 }
-body main article ul li:before {
+body main article > ul li:before {
   content: '';
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-body main article ul li a {
+body main article > ul li a {
   font-family: "Lato-Bold";
   font-size: 10.8px;
   line-height: 15.6px;
   color: #21576f;
-  padding: 40px 10px;
+  padding: 10px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
   vertical-align: middle;
 }
-body main article ul li:hover a,
-body main article ul li.active a {
+body main article > ul li:hover a,
+body main article > ul li.active a {
   color: #57c6d0;
 }
 body main article .contents {
@@ -924,9 +931,26 @@ body main article .contents * {
 body main article .contents h3 {
   font-family: "Lato-Black";
   font-size: 32.5px;
+  line-height: 32.5px;
+}
+body main article .contents h4 {
+  font-family: "Lato-Black";
+  font-size: 25px;
+  line-height: 25px;
+}
+body main article .contents h5 {
+  font-family: "Lato-Black";
+  font-size: 17px;
+  line-height: 17px;
 }
 body main article .contents a {
   color: #57c6d0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+body main article .contents a:hover {
+  color: #bd9c57;
 }
 body main article .contents p {
   margin: 2.5% 0;
@@ -980,6 +1004,27 @@ body main article .contents p.img:after {
   content: '';
   width: 100%;
   clear: both;
+}
+body main article .contents table {
+  border: 1px solid #57c6d0;
+  table-layout: fixed;
+}
+body main article .contents table * {
+  font-weight: normal;
+}
+body main article .contents table tbody th {
+  background-color: #57c6d0;
+  color: #fff;
+  padding: 1% 2%;
+}
+body main article .contents table tbody td {
+  padding: 1.5% 2%;
+}
+body main article .contents table tbody tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+body main article .contents small {
+  font-size: 80%;
 }
 body main article .contents._aside {
   display: inline-block;
@@ -1082,9 +1127,54 @@ body main footer nav a:hover {
   body main header .main-navg > a {
     font-size: 0;
     display: block;
+    z-index: 9;
   }
   body main header .main-navg nav {
-    display: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: auto;
+  }
+  body main header .main-navg nav:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    opacity: .7;
+    position: fixed;
+    top: 0;
+  }
+  body main header .main-navg nav > ul {
+    z-index: 9999;
+    position: relative;
+    margin-left: 35px;
+  }
+  body main header .main-navg nav > ul li {
+    display: block;
+    background-color: #fff;
+    text-align: left;
+    padding: 1.5%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  body main header .main-navg nav > ul li:first-child {
+    padding-top: 3%;
+  }
+  body main header .main-navg nav > ul li a {
+    white-space: normal;
+  }
+  body main header .main-navg nav > ul li ul {
+    display: block;
+    position: relative;
+    padding: 10px 0 5px 10px;
+    margin: 0;
+    left: 0;
+  }
+  body main header .main-navg nav > ul li ul li ul {
+    margin-left: 15px;
+    padding-left: 0;
   }
   body main section.content._features .container > div.no-bg img.ilustra {
     opacity: 0.4;
@@ -1206,31 +1296,69 @@ body main footer nav a:hover {
   }
   body main article {
     padding-top: 99px;
+    overflow: hidden;
   }
   body main article h2 {
     zoom: 0.5;
   }
+  body main article h2 img:not(.graph) {
+    width: 0px;
+  }
   body main article .nav-contents {
     position: fixed;
-    top: -20px;
-    left: 50px;
-    z-index: 9999;
+    top: -25px;
+    left: 0;
+    z-index: 9998;
+    height: 100%;
+    width: 100%;
+  }
+  body main article .nav-contents:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .7;
+    position: absolute;
   }
   body main article .nav-contents li {
     background-color: #fff;
     width: 80px;
     height: 80px;
     border-radius: 80px;
-    margin: 16px -42px;
   }
   body main article .nav-contents li a {
-    padding: 0;
+    padding: 5px;
     font-size: 9px;
   }
   body main article .nav-contents li.active {
     z-index: 9999;
+    position: relative;
   }
-  body main article .contents._aside,
+  body main article .nav-contents.minus {
+    width: auto;
+  }
+  body main article .nav-contents.minus:before {
+    content: '';
+    width: 0;
+    height: 0;
+  }
+  body main article .nav-contents.minus li {
+    margin: 16px -42px;
+    left: 50px;
+  }
+  body main article .contents p.img._f-left span,
+  body main article .contents p.img._f-left em {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  body main article .contents p.img._f-left span img {
+    margin: 0 auto;
+  }
+  body main article .contents._aside {
+    width: 100%;
+    padding: 10%;
+  }
   body main article aside {
     width: 100%;
     padding: 10%;
