@@ -175,6 +175,37 @@ ul.list._decimal li {
 .btn._light-blue {
   background: #57c6d0;
 }
+.super-link {
+  border: 1px solid #bd9c57;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Lato-Bold";
+  font-size: 21px !important;
+  text-transform: uppercase;
+  line-height: 33px !important;
+}
+.super-link * {
+  font-family: "Lato-Bold";
+  font-size: 21px !important;
+  text-transform: uppercase;
+  line-height: 33px !important;
+}
+.anchor-to {
+  cursor: pointer;
+}
+.anchor-to:before {
+  content: "\f055";
+  font: normal normal normal 18px/1 FontAwesome;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.anchor-to.active:before {
+  content: "\f056";
+}
 /*******************************
             STRUTUCTURE
 *******************************/
@@ -340,6 +371,9 @@ body main header .main-navg li ul li a {
 }
 body main header .main-navg li ul li a:hover {
   padding-left: 5px;
+}
+body main header .main-navg li ul li a.active:before {
+  content: "";
 }
 body main header .main-navg li ul li ul {
   left: 99.9%;
@@ -958,8 +992,16 @@ body main article .contents a {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+body main article .contents a * {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
 body main article .contents a:hover {
-  color: #bd9c57;
+  color: #bd9c57 !important;
+}
+body main article .contents a:hover * {
+  color: #bd9c57 !important;
 }
 body main article .contents p,
 body main article .contents div {

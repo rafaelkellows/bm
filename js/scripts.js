@@ -9,6 +9,7 @@ $(function(){
 	            this.simulator();
 	            this.contentsBreadCrumb();
 	            this.setMinusBreadCrumb();
+	            this.accordion();
 	        },
 	        setHeader : function(elem){
 		        var offset = 180;
@@ -110,8 +111,6 @@ $(function(){
 	        		}else{
 	        			$(this).addClass('active').next('nav').show();
 	        		}
-	        		//if( )
-	        		
 	        	});
 	        	nav.find('nav a').click(function(e){
 	        		//e.preventDefault();
@@ -123,7 +122,6 @@ $(function(){
 	        		$('body main header .main-navg li a').removeClass('active');
 	        		$('body main header .main-navg li a.'+_currpage).addClass('active');
 	        	}
-	        	
 	        },
 	        setMinusBreadCrumb : function () {
 				//To Responsive BreadCrumb
@@ -146,6 +144,9 @@ $(function(){
 					var _idlink = String(bmaxima.anchorPage().substring(1));
 		        	cnt.find(".cnt-"+_idlink).show();
 		        	nav.find('li a.'+_idlink).parent().addClass('active');
+
+		        	$('body main header .main-navg li a.'+_idlink).addClass('active');
+
 		        	if( $(window).width() > 768 ){
 		        		jQuery('html, body').animate({scrollTop: nav.find('li a.'+_idlink).offset().top  - 170}, 250);
 		        	}else{
@@ -173,6 +174,39 @@ $(function(){
 	        scrollTo : function(elem){
 				jQuery('html, body').animate({scrollTop: 0}, duration);
 				return false;
+	        },
+	        accordion : function(){
+	        	var _e,_a,cond; //_element to link, _accordion container
+	        	_e = $(".accordion");
+	        	if(!_e.length) return;
+	        	_e.hide(), cond =  _e.attr("class").indexOf('_linktotop');
+				( cond ) ? _a = _e.prev() : _a = _e.next(); 
+				
+				_a.addClass('anchor-to').click(function(){ //class to apply plus and minus icon
+					//close elements with class _close | _no-close to keep it open
+					if($(this).hasClass('active')){
+						$(this).removeClass('active');
+						( cond ) ? $(this).next().fadeOut(500) : $(this).prev().fadeOut(500);
+						return;
+					}
+
+					_e.each(function(){
+						if( $(this).hasClass('_close') ) {
+							$(this).fadeOut(200);
+							( cond ) ? $(this).prev().removeClass('active') : $(this).next().removeClass('active');
+						}
+					});
+					if( cond ){
+						$(this).addClass('active').next().fadeIn(400, function(){
+							jQuery('html, body').animate({scrollTop: $(this).offset().top  - 150}, 250);
+						});
+					}else{
+						$(this).addClass('active').prev().fadeIn(400, function(){
+							jQuery('html, body').animate({scrollTop: $(this).offset().top  - 150}, 250);
+						});
+					}
+				});
+				
 	        }
 	    }
 		bmaxima.init();

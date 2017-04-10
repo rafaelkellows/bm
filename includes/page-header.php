@@ -15,7 +15,7 @@
         </div>
         
         <div class="logo-info">
-          <h1 title="Banco Máxima - Investimentos, empréstimos e câmbio"><a href="javascript:void(0);"  title="Banco Máxima - Investimentos, empréstimos e câmbio"><img src="images/logoBancoMaxima.png" width="389" height="45" /></a></h1>
+          <h1 title="Banco Máxima - Investimentos, empréstimos e câmbio"><a href="index.php"  title="Banco Máxima - Investimentos, empréstimos e câmbio"><img src="images/logoBancoMaxima.png" width="389" height="45" /></a></h1>
           <nav class="li-navg">
             <a class="btn _brown" href="javascript:void(0);" title="Abra sua Conta">Abra sua Conta</a>
             <a class="btn _dark-blue" href="javascript:void(0);" title="Acesse sua Conta">Acesse sua Conta</a>
@@ -32,37 +32,37 @@
               <li>
                 <a class="institucional" href="institucional.php" title="Institucional">Institucional</a>
                 <ul>
-                  <li><a href="institucional.php#quem-somos">Quem somos</a></li>
-                  <li><a href="institucional.php#historico">Histórico</a></li>
-                  <li><a href="institucional.php#diretoria">Diretoria</a></li>
-                  <li><a href="institucional.php#gestao-de-risco">Gestão de risco</a></li>
-                  <li><a href="institucional.php#codigo-de-etica">Código de ética</a></li>
-                  <li><a href="institucional.php#informacoes-financeiras">Informações Financeiras</a></li>
+                  <li><a class="quem-somos" href="institucional.php#quem-somos">Quem somos</a></li>
+                  <li><a class="historico" href="institucional.php#historico">Histórico</a></li>
+                  <li><a class="diretoria" href="institucional.php#diretoria">Diretoria</a></li>
+                  <li><a class="gestao-de-risco" href="institucional.php#gestao-de-risco">Gestão de risco</a></li>
+                  <li><a class="codigo-de-etica" href="institucional.php#codigo-de-etica">Código de ética</a></li>
+                  <li><a class="informacoes-financeiras" href="institucional.php#informacoes-financeiras">Informações Financeiras</a></li>
                 </ul>
               </li>
               <li>
                 <a class="investimentos" href="investimentos.php#lci" title="Investimentos">Investimentos</a>
                 <ul>
-                  <li><a href="investimentos.php#lci">LCI (Letra de Crédito Imobiliário)</a></li>
-                  <li><a href="investimentos.php#cdb">CDB (Certificado de Depósito Bancário)</a></li>
-                  <li><a href="investimentos.php#simulador-investimento">Simulador de investimento</a></li>
-                  <li><a href="investimentos.php#cdb-empresas">Para Empresas</a></li>
+                  <li><a class="lci" href="investimentos.php#lci">LCI (Letra de Crédito Imobiliário)</a></li>
+                  <li><a class="cdb" href="investimentos.php#cdb">CDB (Certificado de Depósito Bancário)</a></li>
+                  <li><a class="simulador-investimento" href="investimentos.php#simulador-investimento">Simulador de investimento</a></li>
+                  <li><a class="cdb-empresas" href="investimentos.php#cdb-empresas">Para Empresas</a></li>
                 </ul>
               </li>
               <li>
                 <a class="emprestimos" href="emprestimos.php#credmaxima-emprestimo-com-garantia-imobiliaria" title="Empréstimos">Empréstimos</a>
                 <ul>
-                  <li><a href="emprestimos.php#credmaxima-emprestimo-com-garantia-imobiliaria">CredMáxima</a>
+                  <li><a class="credmaxima-emprestimo-com-garantia-imobiliaria credmaxima-como-funciona-o-emprestimo credmaxima-documentacao-necessaria credmaxima-simulador" href="emprestimos.php#credmaxima-emprestimo-com-garantia-imobiliaria">CredMáxima</a>
                     <ul>
-                      <li><a href="emprestimos.php#credmaxima-emprestimo-com-garantia-imobiliaria">Empréstimo com garantia imobiliária</a></li>
-                      <li><a href="emprestimos.php#credmaxima-como-funciona-o-emprestimo">Como Funciona o Empréstimo</a></li>
-                      <li><a href="emprestimos.php#credmaxima-documentacao-necessaria">Documentação Necessária</a></li>
-                      <li><a href="emprestimos.php#credmaxima-simulador">Simulador</a></li>
+                      <li><a class="credmaxima-emprestimo-com-garantia-imobiliaria" href="emprestimos.php#credmaxima-emprestimo-com-garantia-imobiliaria">Empréstimo com garantia imobiliária</a></li>
+                      <li><a class="credmaxima-como-funciona-o-emprestimo" href="emprestimos.php#credmaxima-como-funciona-o-emprestimo">Como Funciona o Empréstimo</a></li>
+                      <li><a class="credmaxima-documentacao-necessaria" href="emprestimos.php#credmaxima-documentacao-necessaria">Documentação Necessária</a></li>
+                      <li><a class="credmaxima-simulador" href="emprestimos.php#credmaxima-simulador">Simulador</a></li>
                     </ul>
                   </li>
-                  <li><a href="/simulador">Simulador de Empréstimo</a></li>
-                  <li><a href="/financiamento-de-imoveis">Financiamento de imóveis</a></li>
-                  <li><a href="/simulador-financiamento">Simulador de financiamento</a></li>
+                  <li><a class="simulador" href="emprestimos.php#simulador">Simulador de Empréstimo</a></li>
+                  <li><a class="financiamento-de-imoveis" href="emprestimos.php#financiamento-de-imoveis">Financiamento de imóveis</a></li>
+                  <li><a class="simulador-financiamento" href="emprestimos.php#simulador-financiamento">Simulador de financiamento</a></li>
                 </ul>
               </li>
               <li>

@@ -90,6 +90,18 @@ ul.list{
   &._dark-blue{ background: @dark-blue; }
   &._light-blue{ background: @light-blue; }
 }
+.super-link{
+  border:1px solid @brown; width: 100%; box-sizing: border-box; text-align: center; 
+  font-family: "Lato-Bold"; font-size: 21px !important; text-transform: uppercase; line-height: 33px !important;
+  *{ font-family: "Lato-Bold"; font-size: 21px !important; text-transform: uppercase; line-height: 33px !important; }
+}
+.anchor-to{
+  cursor: pointer;
+  &:before{ content: "\f055"; font: normal normal normal 18px/1 FontAwesome; width: 25px; height: 25px; line-height: 25px; .d-inline_v-middle; }
+  &.active{
+    &:before{ content: "\f056"; }
+  }
+}
 
 
 /*******************************
@@ -160,6 +172,9 @@ body{
               a{ 
                 line-height: 25px; font-size: 14px; white-space: nowrap; 
                 &:hover{ padding-left:5px; }
+                &.active{ 
+                  &:before{ content: ""; } 
+                }
               }
               /* Second SubMenu */
               ul{
@@ -412,7 +427,11 @@ body{
         h5{ font-family: "Lato-Black"; font-size: 17px; line-height: 17px; }
         a{ 
           color: @light-blue; .transit;
-          &:hover{ color: @brown; }
+          * { .transit; }
+          &:hover{ 
+            color: @brown !important; 
+            *{ color: @brown !important; }
+          }
         }
         p, div{ 
           margin: 2.5% 0; 

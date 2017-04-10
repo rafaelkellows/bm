@@ -61,6 +61,9 @@
             <p><strong>Risco</strong><br>Conservador.</p>
             <p><strong>Dúvidas e investimentos</strong><br>4002-8100 – Horário de atendimento: Segunda à Sexta-feira das 9h às 18h.</p>
             <a href="http://bancomaxima.tbfconsultoria.com.br/contato/abra-sua-conta/" target="_blank">Preencha seu cadastro e invista na LCI Máxima a partir de R$ 30 mil.</a>
+            
+            <p><a class="super-link" href="javascript:void(0);">Simule aqui o seu investimento</a></p>
+
             <p><small>*Fundo Garantidor de Créditos (FGC): Entidade privada sem fins lucrativos, criada em 1995, com aportes de todas as instituições financeiras e associações de poupança e empréstimo do sistema financeiro nacional. Seu objetivo é garantir os recursos de correntistas, poupadores e investidores, em caso de intervenção, liquidação ou falência. A resolução 4.222 elevou o limite das garantias para R$ 250 mil por CPF/CNPJ por instituição financeira. Esta instituição é aderente ao Código ANBIMA de Regulação e Melhores Práticas para atividade de Distribuição de Produtos de Investimento no Varejo.</small></p>
           </div>
           <div class="cnt-cdb">
@@ -147,6 +150,9 @@
             <p><strong>Dúvidas e investimentos</strong><br>4002-8100 – Horário de atendimento: Segunda à Sexta-feira das 9h às 18h.</p>
 
             <a href="http://bancomaxima.tbfconsultoria.com.br/contato" target="_blank">Converse com nossos consultores para saber mais sobre este tipo de investimento!</a>
+            
+            <p><a class="super-link" href="javascript:void(0);">Simule aqui o seu investimento</a></p>
+
             <p><small>*Fundo Garantidor de Créditos (FGC): Entidade privada sem fins lucrativos, criada em 1995, com aportes de todas as instituições financeiras e associações de poupança e empréstimo do sistema financeiro nacional. Seu objetivo é garantir os recursos de correntistas, poupadores e investidores, em caso de intervenção, liquidação ou falência. A resolução 4.222 elevou o limite das garantias para R$ 250 mil por CPF/CNPJ por instituição financeira. Esta instituição é aderente ao Código ANBIMA de Regulação e Melhores Práticas para atividade de Distribuição de Produtos de Investimento no Varejo. Consultar condições, prazos e taxas no momento da operação, pois podem sofrer alterações sem aviso prévio. A rentabilidade divulgada é meramente ilustrativa. Os indicadores utilizados caracterizam referência econômica com data base jan/16.</small></p>
           </div>
           <div class="cnt-simulador-investimento">
@@ -235,40 +241,16 @@
             <p><strong>Risco</strong><br>Conservador.</p>
 
             <a href="http://bancomaxima.tbfconsultoria.com.br/contato" target="_blank">Converse com nossos consultores para saber mais sobre este tipo de investimento!</a>
+            
+            <p><a class="super-link" href="javascript:void(0);">Conheça as vantagens do <strong>CâMBIO MÁXIMA</strong></a></p>
+
             <p><small>*Fundo Garantidor de Créditos (FGC): Entidade privada sem fins lucrativos, criada em 1995, com aportes de todas as instituições financeiras e associações de poupança e empréstimo do sistema financeiro nacional. Seu objetivo é garantir os recursos de correntistas, poupadores e investidores, em caso de intervenção, liquidação ou falência. A resolução 4.222 elevou o limite das garantias para R$ 250 mil por CPF/CNPJ por instituição financeira. Esta instituição é aderente ao Código ANBIMA de Regulação e Melhores Práticas para atividade de Distribuição de Produtos de Investimento no Varejo.</small></p>
           </div>
         </div>
         <aside>
-          <h3>Máxima na Mídia</h3>
-          
-          <div class="container">
-            <video width="320" height="240" poster="images/placeholder.png"  controls>
-                <source src="credmaxima.mp4" type="video/mp4">
-            </video>
-            <article>
-              <h4>Artigos</h4>
-              <dl>
-                <dt><a href="javascript:void(0);">O que podemos concluir na retrospectiva econômica de 2016 por Saul Dutra Sabbá de 2016 por Saul Dutra Sabbá</a></dt>
-                <dd>02 Jan 2017</dd>
-              </dl>
-              <dl>
-                <dt><a href="javascript:void(0);">Refinanciamento pode tirar empreendedor do sufoco</a></dt>
-                <dd>19 Dec 2016</dd>
-              </dl>
-              <dl>
-                <dt>Aviso ao mercado – Valor Econômico</dt>
-                <dd>11 Nov 2016</dd>
-              </dl>
-              <dl>
-                <dt>Cresce o interesse por empréstimos com garantia de imóvel</dt>
-                <dd>07 Nov 2016</dd>
-              </dl>
-              <dl>
-                <dt>Cresce o interesse por empréstimos com garantia de imóvel</dt>
-                <dd>07 Nov 2016</dd>
-              </dl>
-            </article>
-          </div>
+        <?php
+          @require_once('includes/content-artigos.php');
+        ?>
         </aside>
 
       </article>
