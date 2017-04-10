@@ -403,7 +403,7 @@ body{
         span{ position: absolute; bottom: 95px; display: block; font-size: 49px; color: #21576f; text-transform: uppercase; text-align: center; text-align: right; z-index: 1; width: 100%; padding-right: 845px; padding-left: 55px; box-sizing: border-box; }
         img{ 
           .d-inline_v-top;
-          &.graph{ margin: 90px -217px 0 -500%; z-index: 1; }
+          &.graph{ margin: 85px -217px 0 -500%; z-index: 1; }
         }
       }
       > ul{
@@ -472,8 +472,11 @@ body{
           }
         }
         table{
-          border:1px solid @light-blue; table-layout: fixed;
+          border:1px solid @light-blue; table-layout: fixed; width: 100%;
           * { font-weight: normal; }
+          thead{
+            th{ background-color: @light-blue; color: #fff; padding:1% 2%;  } 
+          }
           tbody{
             th{ background-color: @light-blue; color: #fff; padding:1% 2%;  } 
             td{ padding:1.5% 2%;  } 

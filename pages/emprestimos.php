@@ -3,7 +3,7 @@
         <h2>
           <span>Empréstimos</span>
           <img class="graph" src="images/pages/grafico-institucional.png" alt="" />
-          <img src="images/pages/ilustra-investimentos.jpg" alt="" />
+          <img src="images/pages/ilustra-emprestimos.jpg" alt="" />
         </h2>
         <!-- BREAD CRUMB -->
         <ul class="nav-contents">

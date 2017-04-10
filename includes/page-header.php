@@ -66,18 +66,18 @@
                 </ul>
               </li>
               <li>
-                <a class="cambio" href="javascript:void(0);" title="Câmbio">Câmbio</a>
+                <a class="cambio" href="cambio.php" title="Câmbio">Câmbio</a>
                 <ul>
-                  <li><a href="/moedas-em-especie">Moedas em Espécie</a></li>
-                  <li><a href="/cartao-pre-pago-de-viagem">Cartão Pré-pago de Viagem</a></li>
-                  <li><a href="/cartao-pre-pago-visa-corporativo">Cartão Pré-pago Visa Corporativo</a></li>
-                  <li><a href="/loja-virtual">Loja virtual</a></li>
-                  <li><a href="/reserva-de-moeda">Reserva de Moeda</a></li>
-                  <li><a href="/servico-de-delivery">Serviço de Delivery</a></li>
-                  <li><a href="/remessas-internacionais">Remessas Internacionais</a></li>
-                  <li><a href="/rede-de-atendimento">Rede de Atendimento</a></li>
-                  <li><a href="/programa-multiplus-de-fidelidade">Programa Multiplus de Fidelidade</a></li>
-                  <li><a href="/cambio">Para Empresas</a></li>
+                  <li><a class="moedas-em-especie" href="cambio.php#moedas-em-especie">Moedas em Espécie</a></li>
+                  <li><a class="cartao-pre-pago-de-viagem" href="cambio.php#cartao-pre-pago-de-viagem">Cartão Pré-pago de Viagem</a></li>
+                  <li><a class="cartao-pre-pago-visa-corporativo" href="cambio.php#cartao-pre-pago-visa-corporativo">Cartão Pré-pago Visa Corporativo</a></li>
+                  <li><a class="loja-virtual" href="cambio.php#loja-virtual">Loja virtual</a></li>
+                  <li><a class="reserva-de-moeda" href="cambio.php#reserva-de-moeda">Reserva de Moeda</a></li>
+                  <li><a class="servico-de-delivery" href="cambio.php#servico-de-delivery">Serviço de Delivery</a></li>
+                  <li><a class="remessas-internacionais" href="cambio.php#remessas-internacionais">Remessas Internacionais</a></li>
+                  <li><a class="rede-de-atendimento" href="cambio.php#rede-de-atendimento">Rede de Atendimento</a></li>
+                  <li><a class="programa-multiplus-de-fidelidade" href="cambio.php#programa-multiplus-de-fidelidade">Programa Multiplus de Fidelidade</a></li>
+                  <li><a class="cambio" href="cambio.php#cambio">Para Empresas</a></li>
                 </ul>
               </li>
               <li>

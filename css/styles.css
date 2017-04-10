@@ -918,7 +918,7 @@ body main article h2 img {
   vertical-align: top;
 }
 body main article h2 img.graph {
-  margin: 90px -217px 0 -500%;
+  margin: 85px -217px 0 -500%;
   z-index: 1;
 }
 body main article > ul {
@@ -1098,9 +1098,15 @@ body main article .contents div.img:after {
 body main article .contents table {
   border: 1px solid #57c6d0;
   table-layout: fixed;
+  width: 100%;
 }
 body main article .contents table * {
   font-weight: normal;
+}
+body main article .contents table thead th {
+  background-color: #57c6d0;
+  color: #fff;
+  padding: 1% 2%;
 }
 body main article .contents table tbody th {
   background-color: #57c6d0;
