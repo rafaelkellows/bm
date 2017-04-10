@@ -3,13 +3,13 @@
   <?php
     @require_once('includes/head.php');
   ?>
-  <body class="page-home">
+  <body class="page-empresas">
     
     <main>
       
       <?php
         @require_once('includes/page-header.php');
-        @require_once('pages/home.php');
+        @require_once('pages/empresas.php');
         @require_once('includes/page-footer.php');
       ?>
 

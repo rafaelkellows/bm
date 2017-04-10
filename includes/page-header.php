@@ -77,26 +77,26 @@
                   <li><a class="remessas-internacionais" href="cambio.php#remessas-internacionais">Remessas Internacionais</a></li>
                   <li><a class="rede-de-atendimento" href="cambio.php#rede-de-atendimento">Rede de Atendimento</a></li>
                   <li><a class="programa-multiplus-de-fidelidade" href="cambio.php#programa-multiplus-de-fidelidade">Programa Multiplus de Fidelidade</a></li>
-                  <li><a class="cambio" href="cambio.php#cambio">Para Empresas</a></li>
+                  <li><a class="emp-cambio" href="empresas.php#emp-cambio">Para Empresas</a></li>
                 </ul>
               </li>
               <li>
-                <a class="empresas" href="javascript:void(0);" title="Empresas">Empresas</a>
+                <a class="empresas" href="empresas.php" title="Empresas">Empresas</a>
                 <ul>
-                  <li><a href="#">Crédito</a>
+                  <li><a class="compra-de-carteira-de-recebiveis capital-de-giro" href="empresas.php#compra-de-carteira-de-recebiveis">Crédito</a>
                     <ul>
-                      <li><a href="/compra-de-carteira-de-recebiveis/">Compra de Carteira de Recebíveis</a></li>
-                      <li><a href="/capital-de-giro/">Capital de Giro</a></li>
+                      <li><a class="compra-de-carteira-de-recebiveis" href="empresas.php#compra-de-carteira-de-recebiveis">Compra de Carteira de Recebíveis</a></li>
+                      <li><a class="capital-de-giro" href="empresas.php#capital-de-giro">Capital de Giro</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">Operações Customizadas</a>
+                  <li><a class="tesouraria-e-produtos-passivos certificado-de-recebivel-imobiliario" href="empresas.php#tesouraria-e-produtos-passivos">Operações Customizadas</a>
                     <ul>
-                      <li><a href="/tesouraria-e-produtos-passivos/">Tesouraria e Produtos Passivos</a></li>
-                      <li><a href="/certificado-de-recebivel-imobiliario/">CRI (Certificado de Recebível Imobiliário)</a></li>
+                      <li><a class="tesouraria-e-produtos-passivos" href="empresas.php#tesouraria-e-produtos-passivos">Tesouraria e Produtos Passivos</a></li>
+                      <li><a class="certificado-de-recebivel-imobiliario" href="empresas.php#certificado-de-recebivel-imobiliario">CRI (Certificado de Recebível Imobiliário)</a></li>
                     </ul>
                   </li>
-                  <li><a href="/cdb-empresas/">CDB para Empresas</a></li>
-                  <li><a href="/cambio/">Câmbio</a></li>
+                  <li><a class="cdb-empresas" href="empresas.php#cdb-empresas">CDB para Empresas</a></li>
+                  <li><a class="emp-cambio" href="empresas.php#emp-cambio">Câmbio</a></li>
                 </ul>
               </li>
               <li>
