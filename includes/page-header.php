@@ -107,12 +107,12 @@
                 </ul>
               </li>
               <li>
-                <a class="contato" href="javascript:void(0);" title="Contato">Contato</a>
+                <a class="contato" href="contato.php" title="Contato">Contato</a>
                 <ul>
-                  <li><a href="/contato/">Contato</a></li>
-                  <li><a href="/contato/abra-sua-conta/">Abra sua Conta</a></li>
-                  <li><a href="/correspondentes/">Correspondentes</a></li>
-                  <li><a href="/escritorios/">Escritórios</a></li>
+                  <li><a href="contato.php#contato" title="Contato">Contato</a></li>
+                  <li><a href="contato.php#abra-sua-conta" title="Abra sua Conta">Abra sua Conta</a></li>
+                  <li><a href="contato.php#correspondentes" title="Correspondentes">Correspondentes</a></li>
+                  <li><a href="contato.php#escritorios" title="Escritórios">Escritórios</a></li>
                 </ul>
               </li>
             </ul>

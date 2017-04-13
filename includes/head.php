@@ -34,6 +34,6 @@
     <meta name="theme-color" content="#ffffff">
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/owl.carousel.min.js"></script>
   </head>

@@ -2,7 +2,7 @@
         <!-- PAGE TITLE -->
         <h2>
           <span>Empresas</span>
-          <img class="graph" src="images/pages/grafico-cambio.png" alt="" />
+          <img class="graph" src="images/pages/grafico-empresas.png" alt="" />
           <img src="images/pages/ilustra-empresas.jpg" alt="" />
         </h2>
         <!-- BREAD CRUMB -->

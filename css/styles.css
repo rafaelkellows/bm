@@ -1218,6 +1218,43 @@ body main footer nav a:hover {
   text-decoration: underline;
 }
 /*******************************
+            FORMS
+*******************************/
+body main form,
+body article form,
+body .contents form {
+  font-size: 0 !important;
+}
+body main form label,
+body article form label,
+body .contents form label,
+body main form input,
+body article form input,
+body .contents form input {
+  font-size: 14.5px;
+  margin-bottom: 20px;
+}
+body main form label,
+body article form label,
+body .contents form label {
+  font-family: "Lato-Bold";
+  width: 25%;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 35px;
+}
+body main form input,
+body article form input,
+body .contents form input {
+  width: 75%;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #d7d6d5;
+  padding: 0 1%;
+  line-height: 35px;
+  box-sizing: border-box;
+}
+/*******************************
           RESPONSIVE
 *******************************/
 @media (max-width: 1024px) {
