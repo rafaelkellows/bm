@@ -4,16 +4,34 @@
 body{
 	main, article, .contents{
 		form{
-			font-size: 0 !important;
-			label, input{ font-size: 14.5px; margin-bottom: 20px; }
+			font-size: 0 !important; padding: 3.5% 0;
+			label, input, textarea, select, option{ font-size: 14.5px; margin-bottom: 20px; box-sizing: border-box; border:0; }
 			label{
-				font-family: "Lato-Bold"; width: 25%; .d-inline_v-middle; line-height: 35px;
+				font-family: "Lato-Bold"; width: 25%; line-height: 35px; padding:0 1.5%; 
 			}
-			input{
-				width: 75%; .d-inline_v-top; background-color: #d7d6d5; padding:0 1%; line-height: 35px; box-sizing: border-box; 
+			input, textarea, select{
+				width: 75%; max-width: 75%; background-color: #d7d6d5; padding:0 1%; line-height: 35px;
+			}
+			select{ 
+				height: 35px; 
+				option{ line-height: 50px; }
+			}
+			textarea{ line-height: 20px; min-height: 180px; padding:1%; }
+			input[type=submit], input[type=button]{
+				text-transform: uppercase;
 			}
 			&._label-to-left{
-				
+				label{ .d-inline_v-middle; }
+				input, textarea, select{ .d-inline_v-top; }
+			}
+			&._txt-to-right{ 
+				text-align: right;
+				label{ text-align: right; }
+			}
+			&._blue-bt{
+				input[type=submit], input[type=button]{ 
+					background-color: @light-blue; color: #fff; font-family: 'Lato-Bold';
+				}
 			}
 		}
 	}

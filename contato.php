@@ -3,7 +3,7 @@
   <?php
     @require_once('includes/head.php');
   ?>
-  <body class="page-empresas">
+  <body class="page-contato">
     
     <main>
       

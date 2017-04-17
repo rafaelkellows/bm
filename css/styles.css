@@ -132,11 +132,11 @@ select {
   color: #fff;
   text-transform: uppercase;
 }
-ul.list._bullets li {
+ul.list._bullets > li {
   list-style-type: disc;
   margin-left: 25px;
 }
-ul.list._decimal li {
+ul.list._decimal > li {
   list-style-type: decimal;
   margin-left: 25px;
 }
@@ -270,13 +270,16 @@ body main header .top-navg > nav.tl-navg a {
 body main header .top-navg > nav.tr-navg a {
   margin: 5px 37px;
   text-align: center;
-  font-size: 12px;
+  font-size: 0;
   width: 24px;
   height: 24px;
   border: 2px solid #fff;
   border-radius: 24px;
   box-sizing: border-box;
   line-height: 20px;
+}
+body main header .top-navg > nav.tr-navg a:before {
+  font-size: 14px;
 }
 body main header .top-navg > nav.tr-navg a i {
   margin-top: -2px;
@@ -1151,6 +1154,9 @@ body main article .contents div[class^='cnt-'] strong {
   font-family: "Lato-Bold";
   color: #57c6d0;
 }
+body main article .contents .cnt-escritorios iframe {
+  width: 100%;
+}
 body main article > aside {
   display: inline-block;
   vertical-align: top;
@@ -1202,6 +1208,18 @@ body main article > aside .container article dl dt * {
 body main article > aside .container article dl dd {
   line-height: 16px;
 }
+body main article > aside nav.social-navg {
+  text-align: center;
+}
+body main article > aside nav.social-navg a {
+  color: #bd9c57;
+  display: block;
+  margin: 15% auto;
+  width: 80px;
+}
+body main article > aside nav.social-navg a:before {
+  font-size: 60px;
+}
 body main footer {
   background-color: #bd9c57;
   text-align: center;
@@ -1224,35 +1242,113 @@ body main form,
 body article form,
 body .contents form {
   font-size: 0 !important;
+  padding: 3.5% 0;
 }
 body main form label,
 body article form label,
 body .contents form label,
 body main form input,
 body article form input,
-body .contents form input {
+body .contents form input,
+body main form textarea,
+body article form textarea,
+body .contents form textarea,
+body main form select,
+body article form select,
+body .contents form select,
+body main form option,
+body article form option,
+body .contents form option {
   font-size: 14.5px;
   margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 0;
 }
 body main form label,
 body article form label,
 body .contents form label {
   font-family: "Lato-Bold";
   width: 25%;
-  display: inline-block;
-  vertical-align: middle;
   line-height: 35px;
+  padding: 0 1.5%;
 }
 body main form input,
 body article form input,
-body .contents form input {
+body .contents form input,
+body main form textarea,
+body article form textarea,
+body .contents form textarea,
+body main form select,
+body article form select,
+body .contents form select {
   width: 75%;
-  display: inline-block;
-  vertical-align: top;
+  max-width: 75%;
   background-color: #d7d6d5;
   padding: 0 1%;
   line-height: 35px;
-  box-sizing: border-box;
+}
+body main form select,
+body article form select,
+body .contents form select {
+  height: 35px;
+}
+body main form select option,
+body article form select option,
+body .contents form select option {
+  line-height: 50px;
+}
+body main form textarea,
+body article form textarea,
+body .contents form textarea {
+  line-height: 20px;
+  min-height: 180px;
+  padding: 1%;
+}
+body main form input[type=submit],
+body article form input[type=submit],
+body .contents form input[type=submit],
+body main form input[type=button],
+body article form input[type=button],
+body .contents form input[type=button] {
+  text-transform: uppercase;
+}
+body main form._label-to-left label,
+body article form._label-to-left label,
+body .contents form._label-to-left label {
+  display: inline-block;
+  vertical-align: middle;
+}
+body main form._label-to-left input,
+body article form._label-to-left input,
+body .contents form._label-to-left input,
+body main form._label-to-left textarea,
+body article form._label-to-left textarea,
+body .contents form._label-to-left textarea,
+body main form._label-to-left select,
+body article form._label-to-left select,
+body .contents form._label-to-left select {
+  display: inline-block;
+  vertical-align: top;
+}
+body main form._txt-to-right,
+body article form._txt-to-right,
+body .contents form._txt-to-right {
+  text-align: right;
+}
+body main form._txt-to-right label,
+body article form._txt-to-right label,
+body .contents form._txt-to-right label {
+  text-align: right;
+}
+body main form._blue-bt input[type=submit],
+body article form._blue-bt input[type=submit],
+body .contents form._blue-bt input[type=submit],
+body main form._blue-bt input[type=button],
+body article form._blue-bt input[type=button],
+body .contents form._blue-bt input[type=button] {
+  background-color: #57c6d0;
+  color: #fff;
+  font-family: 'Lato-Bold';
 }
 /*******************************
           RESPONSIVE

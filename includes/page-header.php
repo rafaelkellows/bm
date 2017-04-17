@@ -7,10 +7,10 @@
             <a href="javascript:void(0);" title="LCI Máxima">LCI Máxima</a>
           </nav>
           <nav class="tr-navg">
-            <a class="fa fa-facebook" href="javascript:void(0);" title="Facebook"></a>
-            <a class="fa fa-linkedin" href="javascript:void(0);" title="LinkedIn"></a>
-            <a class="fa fa-instagram" href="javascript:void(0);" title="Instagram"></a>
-            <a class="fa fa-youtube-play" href="javascript:void(0);" title="Youtube"></a>
+            <a class="fa fa-facebook" href="http://www.facebook.com/pages/Banco-M%C3%A1xima/107535062774316" target="_blank" title="Facebook">Facebook</a>
+            <a class="fa fa-linkedin" href="http://www.linkedin.com/company/banco-maxima" target="_blank" title="LinkedIn">LinkedIn</a>
+            <a class="fa fa-instagram" href="http://www.instagram.com/bancomaxima" target="_blank" title="Instagram">Instagram</a>
+            <a class="fa fa-youtube-play" href="http://www.youtube.com/user/BancoMaxima" target="_blank" title="Youtube">Youtube</a>
           </nav>
         </div>
         
@@ -109,10 +109,10 @@
               <li>
                 <a class="contato" href="contato.php" title="Contato">Contato</a>
                 <ul>
-                  <li><a href="contato.php#contato" title="Contato">Contato</a></li>
-                  <li><a href="contato.php#abra-sua-conta" title="Abra sua Conta">Abra sua Conta</a></li>
-                  <li><a href="contato.php#correspondentes" title="Correspondentes">Correspondentes</a></li>
-                  <li><a href="contato.php#escritorios" title="Escritórios">Escritórios</a></li>
+                  <li><a class="contato" href="contato.php#contato" title="Contato">Contato</a></li>
+                  <li><a class="abra-sua-conta" href="contato.php#abra-sua-conta" title="Abra sua Conta">Abra sua Conta</a></li>
+                  <li><a class="correspondentes" href="contato.php#correspondentes" title="Correspondentes">Correspondentes</a></li>
+                  <li><a class="escritorios" href="contato.php#escritorios" title="Escritórios">Escritórios</a></li>
                 </ul>
               </li>
             </ul>
